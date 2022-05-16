@@ -1,4 +1,6 @@
-A quick log for shit and giggles: technical debt diff from the new filtering feature
+A quick log for shit and giggles: [technical debt](https://en.wikipedia.org/wiki/Technical_debt) diff from the new filtering feature.
+
++x / -y are the number of lines of code added/removed. For a given feature, best practices are to have the lowest number of code lines at the end because each line is a chance of bug and long code is hard to maintain, debug and extend. See [overengineering](https://en.wikipedia.org/wiki/Overengineering)
 
 -  collect filtering widgets #11066 : +7631 / -2113
 -  Filename filter speedup #11550 : +65 / -85
