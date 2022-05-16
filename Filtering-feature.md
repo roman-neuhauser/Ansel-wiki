@@ -27,3 +27,10 @@ Same for the phweyland's version:
 ----
 
 Total: +659 / -206
+
+----
+----
+
+PR sort-of merging both features:
+
+- recent history and rating filters "soft" revert #11801 : + 793 / -46
