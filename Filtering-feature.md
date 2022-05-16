@@ -13,3 +13,17 @@ A quick log for shit and giggles: technical debt diff from the new filtering fea
   ----
 
 Total: + 8708 / -2390
+
+---
+---
+
+Same for the phweyland's version:
+
+- Add text & color label filters #10694 : +502 / -87
+- text filter: don't add wildcards on empty entry #11264 : +13 / -10
+- Text filter: fix bug on query #11267 : +6 / -7
+- color label filter: inverts icons symbols #11293 : +4 / -8
+- filter (text & colors label): save their state between dt sessions #11303 : +134 / -94
+  ---
+
+Total: +659 / -206
