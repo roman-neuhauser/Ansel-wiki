@@ -2,7 +2,6 @@ Welcome to the R&Darktable wiki!
 
 Things that got removed from upstream darktable:
 
-* the [slideshow view](https://docs.darktable.org/usermanual/3.8/en/slideshow/): darktable is simply too slow for this view to be responsive enough. UNUSABLE
 * the [tethering view](https://docs.darktable.org/usermanual/3.8/en/tethering/): it relies on the lib GPhoto2 which is unmaintained, it's super brittle and buggy. UNUSABLE.
 * the easter egg video game. USELESS.
 * the histogram overlay control for [exposure and black level](https://docs.darktable.org/usermanual/3.8/en/module-reference/utility-modules/shared/scopes/#exposure-adjustment) : it's too easy to inadvertently mess up exposure when cycling through scopes (especially with a Wacom) and it adds unnecessary motion events and redraws. DANGEROUS. LOSS OF CPU CYCLES.
