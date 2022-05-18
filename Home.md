@@ -1,5 +1,9 @@
 Welcome to the R&Darktable wiki!
 
+The philosophy of R&Darktable is : 
+
+> If it's half working, then it's fully gone.
+
 Things that got removed from upstream darktable:
 
 * the [tethering view](https://docs.darktable.org/usermanual/3.8/en/tethering/): it relies on the lib GPhoto2 which is super brittle and buggy. UNUSABLE.
