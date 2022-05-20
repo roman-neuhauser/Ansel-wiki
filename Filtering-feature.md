@@ -37,4 +37,10 @@ PR sort-of merging both features:
 
 - recent history and rating filters "soft" revert #11801 : + 793 / -46
 
+----
+
+This was "solved" in the end in the typical darktable fashion : choosing to not choose, and make an option that allows both paths. Linux geeks love their options, they make them feel in control and feel like they have a choice, even though choosing between equally flawed options is only the illusion of choice, and displaying multiple options only shows your inability to decide[^1]. So darktable is rapidly collecting a lot of useless options, that pretend to account for various workflows while no clean, consistent and unified workflow is offered by default, so you can keep fooling yourself with all that choice without ever being productive at the end. Not to mention, your computer has to compute and branch between all those choices, so it ends up in spaghetti code that's hardly optimizable by your compiler. 
+
 Next time a refactoring project is started in darktable, please kill it before it ends.
+
+[^1]: Test.
