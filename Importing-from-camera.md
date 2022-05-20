@@ -22,3 +22,12 @@ If you don't have an SD card reader, or if your camera is using other types of m
 * kio-mtp + kio-extras on KDE environment, or gvfs-mtp + gvfs-gphoto2 on Gnome environment.
 
 In any case, those methods can still fail because of udev rules and so on. These methods will always be at best brittle. Buying a card reader will spare you a considerable amount of time and problems by removing the need to connect to disputable drivers.
+
+
+## The state of tethering on Linux
+
+Tethering looks pro and sounds cool. When it works.
+
+Tethering on Linux happens through a single library : GPhoto2. After having tested it several times since 2013, with 3 different cameras, I came to the conclusion that it is nowhere near usable in a production environment. Sure, you will always find that geek that spent 3 days debugging all the stack to be able to say "I did it", or that guy who is lucky to have the right camera and the right version of the software. But the truth is it's totally random, even on cameras supposed to be fully supported by GPhoto2 and I have fully-supported cameras that worked in the past but don't on more recent versions.
+
+The rule of thumb is you will spend as much time trying to make GPhoto2 work than doing actual photography, which is not good for your credibility if you work for, with and in front of clients. The worst is you might have to troubleshoot again when updates come. Simply get a Windows box and buy a decent tethering soft with user support.
