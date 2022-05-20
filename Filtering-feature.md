@@ -1,4 +1,6 @@
-A quick log for shit and giggles: [technical debt](https://en.wikipedia.org/wiki/Technical_debt) diff from the new filtering feature.
+The new filtering feature, forcefully introduced for darktable 4.0, was the straw that made the camel's back break and made me realized that I had been working with a team of idiots for too long, which was cause to start this fork. It is a solution in search for a problem, over-engineered, introducing features that nobody needed in the worst possible way, under cover of what started as a mere refactoring. Then, idiots got trigger-happy and couldn't resist adding bloat to what was just refactored, just because they could. Oversight of the problem to solve was long lost, because there was no problem in the first place.
+
+A quick log for shit and giggles of [technical debt](https://en.wikipedia.org/wiki/Technical_debt) diff from the new filtering feature.
 
 +x / -y are the number of lines of code added/removed. For a given feature, best practices are to have the lowest number of code lines at the end because each line is a chance of bug and long code is hard to maintain, debug and extend. See [overengineering](https://en.wikipedia.org/wiki/Overengineering)
 
@@ -19,7 +21,7 @@ Total: + 8708 / -2390
 ----
 ----
 
-Same for the phweyland's version:
+Same for the phweyland's version, which achieved mostly the same goal minus the shitload of configuration options:
 
 - Add text & color label filters #10694 : +502 / -87
 - text filter: don't add wildcards on empty entry #11264 : +13 / -10
@@ -36,3 +38,5 @@ Total: +659 / -206
 PR sort-of merging both features:
 
 - recent history and rating filters "soft" revert #11801 : + 793 / -46
+
+Next time a refactoring project is started in darktable, please kill it before it ends.
