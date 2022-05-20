@@ -17,7 +17,8 @@ The most straightforward way is simply to plug your SD card into the SD reader o
 If you don't have an SD card reader, or if your camera is using other types of memory cards (CF, XQD), you need to plug in your camera to your computer using an USB cable. To read the content of the memory card, your computer will need to have the proper drivers installed. On Linux, you may need to install one or more of the following packages :
 
 * libmtp,
-* linuxptp/libptp,
-* libgphoto2,
+* linuxptp or libptp,
+* libgphoto2 and possibly gphoto2 (which includes libptp),
 * kio-mtp + kio-extras on KDE environment, or gvfs-mtp + gvfs-gphoto2 on Gnome environment.
 
+In any case, those methods can still fail because of udev rules and so on. These methods will always be at best brittle. Buying a card reader will spare you a considerable amount of time and problems by removing the need to connect to disputable drivers.
