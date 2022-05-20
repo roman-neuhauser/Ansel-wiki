@@ -19,5 +19,5 @@ If you don't have an SD card reader, or if your camera is using other types of m
 * libmtp,
 * linuxptp,
 * libgphoto2,
-* kio-mtp on KDE environment, or gvfs-mtp on Gnome environment.
+* kio-mtp + kio-extras on KDE environment, or gvfs-mtp + gvfs-gphoto2 on Gnome environment.
 
