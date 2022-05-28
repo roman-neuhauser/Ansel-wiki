@@ -4,9 +4,9 @@ The philosophy of R&Darktable is : 
 
 > If it's half working, then it's fully gone.
 
-## What was removed from mainstream darktable
+# What was removed from mainstream darktable
 
-### Features
+## Features
 
 * the [tethering view](https://docs.darktable.org/usermanual/3.8/en/tethering/): it relies on the lib GPhoto2 which is super brittle and buggy. The tethering view is merely a GUI over Gphoto2, much like [Entangle](https://entangle-photo.org/). The problem is GPhoto2 is known to break something different at each new release, so it's simply not worth the trouble to maintain a GUI over a Schrödinger cat. UNUSABLE. Use Entangle if you need to.
 * the easter egg video game. USELESS.
@@ -18,7 +18,7 @@ The philosophy of R&Darktable is : 
 * the [second darkroom window](https://docs.darktable.org/usermanual/3.8/en/darkroom/darkroom-view-layout/) : darktable is slow enough with 2 pipelines (thumbnail & preview), a third one is not realistic. This should have been the main preview redirected to another window but the code has been hastily hacked by copy-pasting, it's terrible. Also there is no traceability on which display profile will be used. LOSS OF CPU CYCLES.
 * the block and timeout overlay mode in lighttable : terrible code for something never used. USELESS.
 
-### Preferences
+## Preferences
 
 * The option to display a mask button in module's header is removed and the button is always shown,
 * The option to display the scroll bars in lighttable and darkroom is removed, scrollbars will always appear in lighttable and will never appear in darkroom,
@@ -27,7 +27,7 @@ The philosophy of R&Darktable is : 
 * The option to scroll to the expanded module is removed, expanded modules will always trigger a scroll to be fully visible in viewport.
 * The option to open only one module at a time is removed. Modules will never be auto-collapsed when a new module is expanded.
 
-## Modules deprecated
+# Modules deprecated
 
 All the remaining Lab modules that I have warned against for years are deprecated, as well as the not-so-good RGB ones. Namely:
 
@@ -46,14 +46,16 @@ All the remaining Lab modules that I have warned against for years are deprecate
 * split-toning,
 * velvia
 
-## What was changed from mainstream darktable
+One of the most common questions, since the big scene-referred change, was "what modules should I avoid". Now, you don't need to ask.
 
-### Behaviours
+# What was changed from mainstream darktable
+
+## Behaviours
 
 * In lighttable, the "mouse over" event now does not select images for writing and possibly harmful operation (writing metadata, copying history stack, deleting/moving files, applying styles, rating, labelling, tagging etc.). These events trigger only safe read-only events (displaying metadata).
 * The "copy all" history stack now copies and pastes white balance too.
 
-### Widgets
+## Widgets
 
 * The export module is moved to the left sidebar in darkroom and in lighttable, for consistency,
 * "collections" module renamed "collect",
