@@ -68,4 +68,11 @@ All the remaining Lab modules that I have warned against for years are deprecate
 
 The purpose of these changes is to have a "file" left sidebar in lighttable (import, export, collect) and an "edit" right sidebar (apply styles, developments, tags, etc.), with names that call to action in order to present the workflow steps.
 
-TOTAL OF CODE LINES REMOVED : 10495
+---
+
+# Total of lines of code removed
+
+Excluding comments and blanks, using `cloc $(git ls-files)`:
+
+* C code : 14074
+* CSS : 564
