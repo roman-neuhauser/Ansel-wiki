@@ -74,5 +74,5 @@ The purpose of these changes is to have a "file" left sidebar in lighttable (imp
 
 Excluding comments and blanks, using `cloc $(git ls-files)`:
 
-* C code : 14074
+* C code and C headers : 14074
 * CSS : 564
