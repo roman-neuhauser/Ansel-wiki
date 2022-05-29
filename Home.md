@@ -53,7 +53,9 @@ One of the most common questions, since the big scene-referred change, was "what
 ## Behaviours
 
 * In lighttable, the "mouse over" event now does not select images for writing and possibly harmful operation (writing metadata, copying history stack, deleting/moving files, applying styles, rating, labelling, tagging etc.). These events trigger only safe read-only events (displaying metadata).
+* Similarly, the modules like tagging, geotagging, etc. that reacted to the "mouse over" event (by updating their content) now only react to selection (click or key stroke). This saves many SQL requests to read metadata when moving the mouse in lighttable.
 * The "copy all" history stack now copies and pastes white balance too.
+* The CSS animations have been removed. Animations are basically videos that need to be computed at 30 FPS while Gtk is only single-threaded on CPU.
 
 ## Widgets
 
