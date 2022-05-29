@@ -63,10 +63,11 @@ One of the most common questions, since the big scene-referred change, was "what
 * "geotagging" module renamed "edit geo tags",
 * "selected image[s]" module renamed "act on selection", and its "images" tab renamed "files",
 * "metadata editor" module renamed "edit metadata",
-* "image information" module renamed "display metadata",
+* "image information" module renamed "display metadata" and moved at the bottom of the left sidebar, to be always visible if expanded (Head-Up Display style),
 * "recently used collections" module renamed "recent collections",
 * "styles" module renamed "apply styles",
-* "tagging" module renamed "edit text tags".
+* "tagging" module renamed "edit text tags",
+* the rating module (stars) at the bottom of the lighttable is removed since rating can already be made on overlays and using shortcuts.
 
 The purpose of these changes is to have a "file" left sidebar in lighttable (import, export, collect) and an "edit" right sidebar (apply styles, developments, tags, etc.), with names that call to action in order to present the workflow steps.
 
