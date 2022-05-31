@@ -21,6 +21,8 @@ The philosophy of R&Darktable is : 
 * the non-dynamic culling mode and the zoomable lighttable view : they are not really used and need a lot of spaghetti code to be handled. DANGEROUS and USULESS.
 * the dark and icon themes : dark themes trigger all sorts of unwanted visual illusions that make color assessment impossible. DANGEROUS.
 
+Overall, 5 to 6 SQL requests per thumbnail per "mouse over" event are now spared, due to the features removed.
+
 ## Preferences
 
 * The option to display a mask button in module's header is removed and the button is always shown,
