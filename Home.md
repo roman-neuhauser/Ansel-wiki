@@ -4,6 +4,10 @@ The philosophy of R&Darktable is : 
 
 > If it's half working, then it's fully gone.
 
+Even I don't have the slightest idea of what many preferences in darktable do. The problem is all those preferences/options trigger special behaviours that may interfere with each other and produce edge cases difficult to predict, let alone to debug. They make the code hard to read and therefore hard to maintain. But "cool new stuff" is favoured over maintainability and ease of use. 
+
+So, rather than trying to do it all, I find safer to do the basics really well and make the most of what remains.
+
 # What was removed from mainstream darktable
 
 ## Features
