@@ -6,17 +6,37 @@ The philosophy of R&Darktable is : 
 
 # Why a fork ?
 
-Even I don't have the slightest idea of what many preferences in darktable do. The problem is all those preferences/options trigger special behaviours that may interfere with each other and produce edge cases difficult to predict, debug, refactor and simplify. They make the code hard to read and therefore hard to maintain. But "cool new stuff" is favoured over maintainability and ease of use. 
+Even I don't have the slightest idea of what many preferences in darktable do. The problem is all those preferences/options trigger special behaviours that may interfere with each other and produce edge cases (heuristics) difficult to predict, debug, refactor and simplify. They make the code hard to read and therefore hard to maintain. But "cool new stuff" is favoured over maintainability and ease of use. 
 
 That wouldn't be so bad if so many changes since 2020 hadn't been just options for the sake of it. Triple click support in shortcuts declaration ? Timeline view ? Modules groups ? Lighttable overlays options ? Let's run a quick computation : there are 7 flavours of thumbnails overlays × 5 different lighttable views × 3 base color themes = 105 combinations of options to style individually in CSS themes… Guess how many are currently broken in upstream darktable ? 3 overlays × 3 views was more than enough, but no… We had to make it impossible and annoying for everyone involved.
 
-This habit, now grounded in darktable's DNA, to keep piling up useless options makes darktable more difficult to learn, understand, use, debug and maintain. This is not progress, this is not design (aka the process of solving problems through the simplest path), this is just geeky kindergarten to keep middle-aged men busy with code on saturdays. It's bullshit. Not to mention, many GUI interactions don't comply with what's deemed standard in 2022, and not even with Gnome or KDE defaults, because apparently we need to outsmart everyone by reinventing even the most basic things like performing dangerous write/delete operations on the picture being hovered. Sorry, but the 2020's is not the right time to pretend to reinvent GUI interactions, and the result is anyway not as clever as the devs think.
+This habit, now grounded in darktable's DNA, to keep piling up useless options makes darktable more difficult to learn, understand, use, debug and maintain. This is not progress, this is not design (aka the process of solving problems through the simplest path), this is just geeky kindergarten to keep middle-aged middle-class white men busy with code on saturdays. It's bullshit. 
 
-And the harsh truth is very few of these many options make you actually more productive, but they surely require a good doc reading to understand WTF they are doing and how to use them. Not to mention, your preferences get nuked at pretty much each update now, so the time you spent tuning and tweaking all that cannot even be seen as a long-term investment.
+Many GUI interactions in darktable don't comply with what's deemed standard in 2022, and neither with Gnome or KDE defaults, because apparently we need to outsmart everyone by reinventing even the most basic things like keyboard navigation and mouse hover events. Sorry, but the 2020's is not the right time to pretend to reinvent GUI interactions, and the result is anyway not as clever as the devs think.
 
-Finally, they make the soft sluggish and laggy since too many things happen on the Gtk level whenever you move the cursor in the window, simply because too many things capture mouse events for disputable tasks, often duplicated.
+And the harsh truth is very few of these many options make you actually more productive, but they surely loose your time since they require a good doc reading to understand WTF they are doing and how to use them. But since your preferences get nuked at pretty much each update now, the time you spent tuning and tweaking all that cannot even be seen as a long-term investment: it's a dry loss.
 
-So, rather than trying to do it all, I find safer to do the basics really well and make the most out of what remains. That is, remove the bloat.
+Finally, they make the soft sluggish and laggy since too many things happen on the Gtk level whenever you move the cursor in the window, simply because too many things capture mouse events for disputable tasks, often duplicated. Gtk is a disgrace (single-threaded on CPU only) and a very slow GUI toolkit, let's keep its use the the strict minimum.
+
+Basically, git pulling darktable now is an anxiety-triggering task meant to answer a daunting question: "what did they break this time". I have had enough of that shit.
+
+So, rather than trying to do it all, I find safer to do the basics really well and make the most out of what remains. That is, remove the bloat, stop trying to account for every anecdotal sub-optimal workflow, and make actual management choices and decisions to build a consistent set of tools for a bunch of real, defined, use cases.
+
+# Roadmap
+
+(Updated June 22nd 2022).
+
+The immediate goal for now is:
+
+1. to get rid of the last useless preferences,
+2. finish backporting non-dynamic culling view features to the dynamic one,
+3. publish a 4.0 version compatible with upstream darktable 4.0 pipeline (modules),
+4. get an OBS repository up and going, maybe with a Flatpak thingy (though Flatpak sucks).
+
+The mid-term goal is:
+
+1. to rewrite the module groups with something simpler with fixed modules layout, closer to what was in darktable 3.0,
+2. remove some options from the great MIDI turducken (at least the triple click thing and the shortcuts for Gtk notebook tabs… the shortcut window is currently a nightmare to configure due to way too many possible shortcuts).
 
 # What was removed from mainstream darktable
 
