@@ -30,6 +30,8 @@ Tethering looks pro and sounds cool. When it works.
 
 Tethering on Linux happens through a single library : GPhoto2. After having tested it several times since 2013, with 3 different cameras, I came to the conclusion that it is nowhere near usable in a production environment. Sure, you will always find that geek that spent 3 days debugging all the stack to be able to say "I did it", or that guy who is lucky to have the right camera and the right version of the software. But the truth is it's totally random, even on cameras supposed to be fully supported by GPhoto2 and I have fully-supported cameras that worked in the past but don't on more recent versions.
 
-The rule of thumb is you will spend as much time trying to make GPhoto2 work than doing actual photography, which is not good for your credibility if you work for, with and in front of clients. The worst is you might have to troubleshoot again when updates come. Simply get a Windows box and buy a decent tethering soft with user support.
+The rule of thumb is you will spend as much time trying to make GPhoto2 work than doing actual photography, which is not good for your credibility if you work for, with and in front of clients. The worst is you might have to troubleshoot again when updates come. Simply get a Windows box and buy a decent tethering soft with user support. 
 
-Not to mention, the main reason for doing tethering on the desktop is to better see the pictures on a larger screen. But the live view that GPhoto2 provides has the same resolution as the back screen of the camera anyway, so it's just bigger pixels.
+I have personally paid 80$ for a Windows software to get a working tethering and it's worth every penny. I will not mislead people into thinking that GPhoto2 is anywhere near usable in general.
+
+Not to mention, the main reason for doing tethering on the desktop is to better see the pictures on a larger screen. But the live view that GPhoto2 provides has the same resolution as the back screen of the camera anyway, so it's just bigger pixels. ¯\_(ツ)_/¯
