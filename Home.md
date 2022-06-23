@@ -142,4 +142,6 @@ I also like physics and clean math, with a deep interest for research. Building 
 
 Reusing that 4th order diffusion model in wavelets space, I invented the joint guided laplacian + RGB ratios diffusion method to reconstruct clipped highlights in 3D, added in darktable 4.0. This one accidentally qualifies as a supervised machine learning algorithm for gradient-based optimization. Fancy words to say that we reconstruct damaged parts of the image by filling them with synthetic content that extrapolates the gradients from the valid parts in a smooth way.
 
+In early 2022, I developed a new [uniform color space](https://eng.aurelienpierre.com/2022/02/color-saturation-control-for-the-21th-century/) specifically for the needs of the color balance RGB, that allows to manipulate saturation for artistic purposes with account for the [Helmholtz-Kohlrausch effect](https://en.wikipedia.org/wiki/Helmholtz%E2%80%93Kohlrausch_effect).
+
 More importantly, I hate computers, programming and high technology (aka stuff I can't repair myself with a wrench). I would still be running Windows XP if it was still supported, and I don't give a flying shit about trending techs… They are all a waste of energy and doped silicon brought to you by capitalists to keep selling useless products to people who have already all they need and more than they deserve.
