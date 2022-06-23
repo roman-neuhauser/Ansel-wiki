@@ -24,7 +24,7 @@ Many GUI interactions in darktable don't comply with what's deemed standard in 2
 
 Actually, the harsh truth is very few of these many options make you more productive. But they surely lose your time since you need to read the doc or (re)configure shortcuts to be able to perform basic tasks like bulk files selection or filtering. And since your preferences get nuked at pretty much each update now, the time you spent tuning and tweaking all that cannot even be seen as a long-term investment: it's just a dry loss.
 
-Finally, the abuse of Gtk events and poorly-coded custom widgets makes the soft sluggish and laggy since too many things happen "real-time" whenever you move the cursor in the window, simply because too many things capture mouse events for disputable tasks, often duplicated. Gtk is a disgrace (single-threaded on CPU only and overall inefficient), let's keep its use the the strict minimum.
+Finally, the abuse of Gtk events and poorly-coded custom widgets makes the soft sluggish and laggy since too many things happen "real-time" whenever you move the cursor in the window, simply because too many things capture mouse events for disputable tasks, often duplicated. Gtk is a disgrace (single-threaded on CPU only and overall inefficient), let's keep its use the the strict minimum, shall we ?
 
 Basically, git pulling darktable now is an anxiety-triggering task meant to answer a daunting question: "what did they break this time ?". I have had enough of that shit. Adding solutions in search for a problem is not ok when it degrades basic usability. Defending solutions with "me likey" is childish and stupid, the quality of a tool is to be assessed by the number of steps and the time needed to achieve a specified task, and what people (devs and users) like is irrelevant.
 
@@ -45,6 +45,10 @@ The mid-term goal is:
 
 1. to rewrite the module groups with something simpler with fixed modules layout, closer to what was in darktable 3.0,
 2. remove some options from the great MIDI turducken (at least the triple click thing and the shortcuts for Gtk notebook tabs… the shortcut window is currently a nightmare to configure due to way too many possible shortcuts).
+
+The long-term goal is anyway to transition to [vkdt](https://github.com/hanatos/vkdt/), which simplifies the pipeline (GPU-only, full-resolution rendering – no heuristics), breaks free from the performance bottleneck that is Gtk by using [Imgui](https://github.com/ocornut/imgui) (low-bloat and running straight on GPU), and keeping GUI code __really__ separated from pixel code.
+
+That is to say, I will pick here the low-hanging fruits, fix what can be easily fixed, to build a reliable tool usable while we wait for vkdt to be mature enough for production.
 
 # What was removed from mainstream darktable
 
