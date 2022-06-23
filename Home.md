@@ -132,7 +132,7 @@ The purpose of these changes is to have a "file" left sidebar in lighttable (imp
 
 # Who the f** is that bloke anyway ?
 
-I'm mostly a portrait photographer with a double training in classical music (piano) and hardware engineering (mechanics and metrology). I taught music for a while and I currently teach post-processing with darktable. 
+I'm mostly a portrait photographer with a double training in classical music (piano) and hardware "low-tech" engineering (mechanics and metrology, Newtonian physics and the likes). I taught music for a while and I currently teach post-processing with darktable. 
 
 I have been an user of darktable since its 0.9 version, somewhere circa 2011. At that time, I didn't even know how to program. I joined darktable's development in 2018 at first to solve the color issues that arose when editing large dynamic range pictures, which led to filmic and later filmic RGB modules, then to the whole scene-referred workflow. For that, I learned from scratch to program in C, OpenCL, with OpenMP, for GPU and though Git. 
 
