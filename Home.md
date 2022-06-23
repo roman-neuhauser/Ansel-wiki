@@ -122,7 +122,4 @@ The purpose of these changes is to have a "file" left sidebar in lighttable (imp
 
 # Total of lines of code removed
 
-Excluding comments and blanks, using `cloc $(git ls-files)`:
-
-* C code and C headers : 14074
-* CSS : 564
+21678 in `src/` only. _(Updated 23rd June 2022)_
