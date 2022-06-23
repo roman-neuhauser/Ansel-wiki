@@ -8,7 +8,7 @@ TL;DR: `git checkout master` or `git pull https://github.com/aurelienpierre/R-Da
 
 __R&Darktable exists for now only in the [master branch](https://github.com/aurelienpierre/R-Darktable/tree/master)__. This `master` branch is kept in sync with upstream darktable (at least twice a month, but not real-time) for everything related to pixel code, such that you can transparently edit images with one or the other, and switch to the other later, without breaking edits. 
 
-Keep in mind that the difference between R&Darktable and darktable is only in the GUI code and in some presets/preferences, pixel modules are the same, but the master branch is still an unstable branch (as in "the branch where new stuff gets merged for general testing, pending a release").
+Keep in mind that the difference between R&Darktable and darktable is only in the GUI code and in some presets/preferences. Pixel modules are the same. In any case, the master branch is still an unstable branch (as in "the branch where new stuff gets merged for general testing, pending a release") both on upstream darktable and here.
 
 # Building R&Darktable with bleeding edge stuff
 
