@@ -4,7 +4,7 @@ Therefore, if you checkout on tags or commits published before this date (like `
 
 # Building R&Darktable synced with upstream
 
-__R&Darktable exists for now only in the [master branch](https://github.com/aurelienpierre/R-Darktable/tree/master)__. This `master` branch is kept in sync with upstream darktable for everything related to pixel code, such that you can transparently edit images with one or the other, and switch to the other later, without breaking edits. 
+__R&Darktable exists for now only in the [master branch](https://github.com/aurelienpierre/R-Darktable/tree/master)__. This `master` branch is kept in sync with upstream darktable (at least twice a month, but not real-time) for everything related to pixel code, such that you can transparently edit images with one or the other, and switch to the other later, without breaking edits. 
 
 Keep in mind that the difference between R&Darktable and darktable is only in the GUI code and in some presets/preferences, pixel modules are the same, but the master branch is still an unstable branch (as in "the branch where new stuff gets merged for general testing, pending a release").
 
