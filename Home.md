@@ -129,3 +129,17 @@ The purpose of these changes is to have a "file" left sidebar in lighttable (imp
 * In the scene-referred workflow, the base presets have been changed like follow:
   * in exposure module, the exposure boost has been changed from +0.5 to +0.7 EV,
   * in filmic module, the contrast is changed to 1, latitude is set to 0.01% (which practically disables it — doesn't matter for v6), and the interpolation spline is set to back to "hard" (fourth order polynomial with C2 connectivity condition).
+
+# Who the f** is that bloke anyway ?
+
+I'm mostly a portrait photographer with a double training in classical music (piano) and hardware engineering (mechanics and metrology). I taught music for a while and I currently teach post-processing with darktable. 
+
+I joined darktable's development in 2018 at first to solve the color issues that arose when editing large dynamic range pictures, which led to filmic and later filmic RGB modules, then to the whole scene-referred workflow. Before 2018, I did mostly B&W photography because I couldn't get the colors I wanted. I gradually extended the scene-referred pipeline with the ASC-CDL mode in color balance, then color balance RGB, tone equalizer, color calibration (and its built-in color checker profiling tool), and negadoctor for film digitizing. I'm happy to report than I now get the colors I wanted and that darktable lets you build your own virtual film emulsion.
+
+I like minimalistic design, so I build generic tools that can be used for a variety of uses (including unplanned and uncharted uses) rather than specific tools that essentially duplicate the same pixel code under different interfaces for the sake of guiding (but restraining) users. 
+
+I also like physics and clean math, with a deep interest for research. Building on the physical accuracy of the scene-referred pipeline, I developed the blurs module which simulates lens and motion blur with physically-accurate models. I extended the Fourier [heat equation](https://en.wikipedia.org/wiki/Heat_equation) to the 4th order in a [wavelets framework](https://en.wikipedia.org/wiki/Spline_wavelet#Cubic_B-spline) and to anisotropic diffusion, at first to produce watercolour-like smudges, and then figured it could be extended to deblurring and dehazing by simply subtracting instead of adding the diffusion term… which gave birth to the diffuse or sharpen module in darktable 3.8. Though I still have mixed feelings about enabling the sharpness addicts to overcook every picture in ways that don't improve its artistic quality.
+
+Reusing that 4th order diffusion model in wavelets space, I invented the joint guided laplacian + RGB ratios diffusion method to reconstruct clipped highlights in 3D, added in darktable 4.0. This one accidentally qualifies as a supervised machine learning algorithm for gradient-based optimization. Fancy words to say that we reconstruct damaged parts of the image by filling them with synthetic content that extrapolates the gradients from the valid parts in a smooth way.
+
+More importantly, I hate computers, programming and high technology (aka stuff I can't repair myself with a wrench). I would still be running Windows XP if it was still supported, and I don't give a flying shit about trending techs… They are all a waste of energy and doped silicon brought to you by capitalists to keep selling useless products to people who have already all they need and more than they deserve.
