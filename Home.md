@@ -4,23 +4,31 @@ The philosophy of R&Darktable is : 
 
 > If it's half working, then it's fully gone.
 
+# What is R&Darktable ?
+
+Rational & Darktable is a darktable fork with 21525 lines of bad code removed. _(Updated 23rd June 2022)_
+
+It runs slightly faster than upstream darktable and doesn't overwhelm users with loads of geeky options which don't make them more productive. It aims at doing the bare minimum really well instead of trying to (over)do everything at once in a sub-optimal way. It solves the long-standing problem of re-inventing basic GUI interaction in ways that are inconsistent with every operating system out there. 
+
 # Why a fork ?
 
 Even I don't have the slightest idea of what many preferences in darktable do. The problem is all those preferences/options trigger special behaviours that may interfere with each other and produce edge cases (heuristics) difficult to predict, debug, refactor and simplify. They make the code hard to read and therefore hard to maintain. But "cool new stuff" is favoured over maintainability and ease of use. 
 
-That wouldn't be so bad if so many changes since 2020 hadn't been just options for the sake of it. Triple click support in shortcuts declaration ? Timeline view ? Modules groups ? Lighttable overlays options ? Let's run a quick computation : there are 7 flavours of thumbnails overlays × 5 different lighttable views × 3 base color themes = 105 combinations of options to style individually in CSS themes… Guess how many are currently broken in upstream darktable ? 3 overlays × 3 views was more than enough, but no… We had to make it impossible and annoying for everyone involved.
+That wouldn't be so bad if so many changes since 2020 hadn't been just options for the sake of it. Triple click support in shortcuts declaration ? Timeline view ? Modules groups with presets ? Lighttable overlays options ? Nobody needed them, which would be fine if most of them were not broken in subtle ways. 
 
-This habit, now grounded in darktable's DNA, to keep piling up useless options makes darktable more difficult to learn, understand, use, debug and maintain. This is not progress, this is not design (aka the process of solving problems through the simplest path), this is just geeky kindergarten to keep middle-aged middle-class white men busy with code on saturdays. It's bullshit. 
+Let's run a quick computation : there are 7 flavours of thumbnails overlays × 5 different lighttable views × 3 base color themes = 105 combinations of options to style individually in CSS themes… Guess how many are currently broken in upstream darktable ? 3 overlays × 3 views was more than enough, but no… We had to make it impossible and annoying for everyone involved.
 
-Many GUI interactions in darktable don't comply with what's deemed standard in 2022, and neither with Gnome or KDE defaults, because apparently we need to outsmart everyone by reinventing even the most basic things like keyboard navigation and mouse hover events. Sorry, but the 2020's is not the right time to pretend to reinvent GUI interactions, and the result is anyway not as clever as the devs think.
+This habit, now grounded in darktable's DNA, to keep piling up useless options makes darktable more difficult to learn, understand, use, debug and maintain. This is not progress, this is not design (aka the process of solving problems through the simplest path), this is just geeky kindergarten to keep middle-aged middle-class white men busy with code on saturdays. It's typical Linux bullshit where people enjoy the feeling of power they get from an overwhelming and cryptic UI more than the result of the work they achieve. Breaking news: software is a tool, a tool is meant to do a job, only the result matters and only the idiots fall in love with their hammer.
 
-And the harsh truth is very few of these many options make you actually more productive, but they surely loose your time since they require a good doc reading to understand WTF they are doing and how to use them. But since your preferences get nuked at pretty much each update now, the time you spent tuning and tweaking all that cannot even be seen as a long-term investment: it's a dry loss.
+Many GUI interactions in darktable don't comply with what's deemed standard in 2022, and not even with Gnome or KDE defaults, because apparently we need to outsmart everyone by reinventing even the most basic things like keyboard navigation and mouse hover events. Sorry, but the 2020's is not the right time to pretend to reinvent GUI interactions, and the result is anyway not as clever or usable as the devs think.
 
-Finally, they make the soft sluggish and laggy since too many things happen on the Gtk level whenever you move the cursor in the window, simply because too many things capture mouse events for disputable tasks, often duplicated. Gtk is a disgrace (single-threaded on CPU only) and a very slow GUI toolkit, let's keep its use the the strict minimum.
+Actually, the harsh truth is very few of these many options make you more productive. But they surely lose your time since you need to read the doc or (re)configure shortcuts to be able to perform basic tasks like bulk files selection or filtering. And since your preferences get nuked at pretty much each update now, the time you spent tuning and tweaking all that cannot even be seen as a long-term investment: it's just a dry loss.
 
-Basically, git pulling darktable now is an anxiety-triggering task meant to answer a daunting question: "what did they break this time". I have had enough of that shit.
+Finally, the abuse of Gtk events and poorly-coded custom widgets makes the soft sluggish and laggy since too many things happen "real-time" whenever you move the cursor in the window, simply because too many things capture mouse events for disputable tasks, often duplicated. Gtk is a disgrace (single-threaded on CPU only and overall inefficient), let's keep its use the the strict minimum.
 
-So, rather than trying to do it all, I find safer to do the basics really well and make the most out of what remains. That is, remove the bloat, stop trying to account for every anecdotal sub-optimal workflow, and make actual management choices and decisions to build a consistent set of tools for a bunch of real, defined, use cases.
+Basically, git pulling darktable now is an anxiety-triggering task meant to answer a daunting question: "what did they break this time ?". I have had enough of that shit. Adding solutions in search for a problem is not ok when it degrades basic usability. Defending solutions with "me likey" is childish and stupid, the quality of a tool is to be assessed by the number of steps and the time needed to achieve a specified task, and what people (devs and users) like is irrelevant.
+
+Let's do less better. That is, remove the bloat, stop trying to account for every anecdotal sub-optimal workflow, and make actual management choices and decisions to build a consistent set of tools for a bunch of real, defined, use cases.
 
 # Roadmap
 
@@ -117,9 +125,3 @@ The purpose of these changes is to have a "file" left sidebar in lighttable (imp
 * In the scene-referred workflow, the base presets have been changed like follow:
   * in exposure module, the exposure boost has been changed from +0.5 to +0.7 EV,
   * in filmic module, the contrast is changed to 1, latitude is set to 0.01% (which practically disables it — doesn't matter for v6), and the interpolation spline is set to back to "hard" (fourth order polynomial with C2 connectivity condition).
-
----
-
-# Total of lines of code removed
-
-21678 in `src/` only. _(Updated 23rd June 2022)_
