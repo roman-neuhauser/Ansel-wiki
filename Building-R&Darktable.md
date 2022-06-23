@@ -17,3 +17,9 @@ TL;DR: `git checkout dev` or `git pull https://github.com/aurelienpierre/R-Darkt
 The experimental new modules and other things that __will break your edits__ and __not be compatible with upstream darktable `master`__ are merged in the [dev](https://github.com/aurelienpierre/R-Darktable/tree/dev) branch since 2018. This is the branch I personally use for my editing because I understand what's going on in there, but I don't recommend anybody else to use it on a daily basis or for serious work. 
 
 The `dev` branch is basically R&Darktable's `master` in which I merge the topic branches where I develop new stuff that gets submitted as PR (pull requests). To use it, you need to `git checkout dev` and backup your database and XMP sidecars before doing anything.
+
+# Actually installing R&Darktable
+
+R&Darktable uses the same scripts and building stack as upstream darktable, so everything works the same but you need to be aware that it will get installed in place of darktable and as darktable, so it uses the same pathes and default config/database directories. The CLI commands are all the same and R&Darktable will be registered as darktable as far as your OS is concerned.
+
+I'm not sure at this point if it's worth it or even desirable to have it installed somewhere else and using different config pathes and CLI commands.
