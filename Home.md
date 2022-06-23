@@ -46,7 +46,7 @@ The mid-term goal is:
 1. to rewrite the module groups with something simpler with fixed modules layout, closer to what was in darktable 3.0,
 2. remove some options from the great MIDI turducken (at least the triple click thing and the shortcuts for Gtk notebook tabs… the shortcut window is currently a nightmare to configure due to way too many possible shortcuts).
 
-The long-term goal is anyway to transition to [vkdt](https://github.com/hanatos/vkdt/), which simplifies the pipeline (GPU-only, full-resolution rendering – no heuristics), breaks free from the performance bottleneck that is Gtk by using [Imgui](https://github.com/ocornut/imgui) (low-bloat and running straight on GPU), and keeping GUI code __really__ separated from pixel code.
+The long-term goal is anyway to transition to [vkdt](https://github.com/hanatos/vkdt/), which simplifies the pipeline (GPU-only, full-resolution rendering – no heuristics), breaks free from the performance bottleneck that is Gtk by using [Imgui](https://github.com/ocornut/imgui) (low-bloat and running straight on GPU), and keeping GUI code __really__ separated from pixel code. Because darktable's core has deep design flaws that have no foreseeable solution under the constraint of preserving compatibility with older edits, so the only solution is a rewrite.
 
 That is to say, I will pick here the low-hanging fruits, fix what can be easily fixed, to build a reliable tool usable while we wait for vkdt to be mature enough for production.
 
