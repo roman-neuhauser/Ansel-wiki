@@ -12,7 +12,7 @@ It runs slightly faster than upstream darktable and doesn't overwhelm users with
 
 # Support
 
-TL;DR: So far, R&Darktable is pretty close to upstream darktable (see the details of the changes below), so there is no reason to get excited. There are no packages yet and it's a work in progress. If you need help with something, please use the Matrix channels:
+So far, R&Darktable is pretty close to upstream darktable (see the details of the changes below), so there is no reason to get excited. There are no packages yet and it's a work in progress. If you need help with something, please use the Matrix channels:
 
 * In English : https://matrix.to/#/#r&darktable-en:matrix.org
 * En Français : https://matrix.to/#/#r&darktable-fr:matrix.org
