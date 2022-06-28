@@ -10,6 +10,13 @@ Rational & Darktable is a darktable fork with 21525 lines of bad code removed. _
 
 It runs slightly faster than upstream darktable and doesn't overwhelm users with loads of geeky options which don't make them more productive. It aims at doing the bare minimum really well instead of trying to (over)do everything at once in a sub-optimal way. It solves the long-standing problem of re-inventing basic GUI interaction in ways that are inconsistent with every operating system out there. 
 
+# Support
+
+TL;DR: So far, R&Darktable is pretty close to upstream darktable (see the details of the changes below), so there is no reason to get excited. There are no packages yet and it's a work in progress. If you need help with something, please use the Matrix channels:
+
+* In English : https://matrix.to/#/!sIgMWfPjcEovJHYUXl:matrix.org/$PjCrP_jqVoR_p5K8SopcVG11H7Yd72IwQxdXBjr0NhA?via=matrix.org
+* En Français : https://matrix.to/#/!PjYYxhSUnNvgWkspze:matrix.org/$8R3Afxwocu5sLb20nfcjGb6V9iCDZLVUcOA7weYzWqE?via=matrix.org
+
 # Why a fork ?
 
 Even I don't have the slightest idea of what many preferences in darktable do. The problem is all those preferences/options trigger special behaviours that may interfere with each other and produce edge cases (heuristics) difficult to predict, debug, refactor and simplify. They make the code hard to read and therefore hard to maintain. But "cool new stuff" is favoured over maintainability and ease of use, and I'm against adding more code that will add more problems that will need more code to fix, because it obviously is a self-feeding loop of madness.
