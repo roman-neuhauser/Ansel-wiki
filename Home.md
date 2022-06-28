@@ -14,8 +14,8 @@ It runs slightly faster than upstream darktable and doesn't overwhelm users with
 
 TL;DR: So far, R&Darktable is pretty close to upstream darktable (see the details of the changes below), so there is no reason to get excited. There are no packages yet and it's a work in progress. If you need help with something, please use the Matrix channels:
 
-* In English : https://matrix.to/#/!sIgMWfPjcEovJHYUXl:matrix.org/$PjCrP_jqVoR_p5K8SopcVG11H7Yd72IwQxdXBjr0NhA?via=matrix.org
-* En Français : https://matrix.to/#/!PjYYxhSUnNvgWkspze:matrix.org/$8R3Afxwocu5sLb20nfcjGb6V9iCDZLVUcOA7weYzWqE?via=matrix.org
+* In English : https://matrix.to/#/#r&darktable-en:matrix.org
+* En Français : https://matrix.to/#/#r&darktable-fr:matrix.org
 
 # Why a fork ?
 
