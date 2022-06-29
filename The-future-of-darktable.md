@@ -67,3 +67,19 @@ If you keep on forced march, past feature-completeness, you end up making a toy,
 Development is actively damaging stability and induces more maintenance work. It's literally work that will give more work. So development for the sake of development, or engineering for the sake of engineering, is madness and does users a disservice too.
 
 So, let's not mistake development with maintenance.
+
+# The future of photography
+
+It's funny to ask questions on the future of a tool without having first a good global look at photography as a discipline.
+
+In 2010, raw photographs had 12-16 Mpx and dynamic ranges around 8 EV. In 2022, they casually blast 45-54 Mpx and 14 EV at base ISO.
+
+Photo editing software have been split into the "virtual darkrooms" (Lightroom, Capture One, darktable) and the "retouching soft" (Photoshop, Gimp, Krita). Those lines have been blurred over the years. Actually, the boundary between developing and retouching is now entirely arbitrary, the tools are pretty much the same.
+
+The film stocks looks have been replaced in digital by presets, color profiles (more or less opinionated). Only at the end of the 2020's, photographers started to get inspired by movies and work their color palette as a visual language. It took until 2020 or 2021 to Lightroom to introduce the color balance, similar to the star feature of Capture One, for color grading (don't tell them, but darktable had it since at least 2016). 
+
+On the other end, I think it's fair to say that smartphones have won the battle of the consumer/entry-level photography. We don't need to care about those anymore, they will never shoot raw. But among the raw shooters, there are still a bunch who make it a priority to open a complicated software only to get the exact same look as the out-of-camera JPEG, but photography being a sport of equipment, there is a status component.
+
+I wish to digital photography to become more than just a metaphor of analog, to embrace the digital medium to blur even more the boundaries between painting, drawing, still images, movies, to include sound, 3D renders, other images. All these technologies are workable within a computer, so they are all unified in the silicon box. 
+
+I also wish it was easier for artists to create procedural images through scripting, like Brownian motion backgrounds or fractals, without being all the time dependent on what developers are willing to code them. Regular people are now playing with Arduino and Raspberry Pi for wearables and artistic projects, scripting procedural visual is very much in line with this.
