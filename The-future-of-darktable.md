@@ -74,7 +74,7 @@ It's funny to ask questions on the future of a tool without having first a good 
 
 In 2010, raw photographs had 12-16 Mpx and dynamic ranges around 8 EV. In 2022, they casually blast 45-54 Mpx and 14 EV at base ISO.
 
-Photo editing software have been split into the "virtual darkrooms" (Lightroom, Capture One, darktable) and the "retouching soft" (Photoshop, Gimp, Krita). Those lines have been blurred over the years. Actually, the boundary between developing and retouching is now entirely arbitrary, the tools are pretty much the same.
+Photo editing software have been split into the "virtual darkrooms" (Lightroom, Capture One, darktable) and the "retouching soft" (Photoshop, Gimp, Krita). Those lines have been blurred over the years. Actually, the boundary between developing and retouching is now entirely arbitrary, the tools are pretty much the same. Although the GUIs are still firmly different, and lots of photographers make it a principle to not "photoshop" their pictures (yes, it's a verb).
 
 The film stocks looks have been replaced in digital by presets, color profiles (more or less opinionated). Only at the end of the 2020's, photographers started to get inspired by movies and work their color palette as a visual language. It took until 2020 or 2021 to Lightroom to introduce the color balance, similar to the star feature of Capture One, for color grading (don't tell them, but darktable had it since at least 2016). 
 
