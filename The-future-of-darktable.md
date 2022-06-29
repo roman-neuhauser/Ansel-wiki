@@ -36,10 +36,34 @@ This was one of the first steps of a twister game in darktable's development, wh
 
 # From display-referred to scene-referred : 2018-2022
 
-The darktable's pipeline had initially been thought to be modular and re-orderable. On second-thought, the re-orderable part was abandonned and modules where placed in a static order, decided at compilation time. At the same time, to enforce the compatibility of older edits, the pre-existing modules needed to be forced in the same order as before when new modules were added. So, the graph solver supposed to flatten all constraints became a liability more than an helper, and modules had to be inserted in pipeline manually.
+The darktable's pipeline had initially been thought to be modular and re-orderable. On second-thought, the re-orderable part was abandonned and modules where placed in a static order, decided at compilation time. At the same time, to enforce the compatibility of older edits, the pre-existing modules needed to be forced in the same order as before when new modules were added.
 
 This fixed pipeline enabled some fixed assumptions inside modules and in the whole pipeline regarding what modules came before and after, namely regarding the distorting modules (crop, rotate, perspective, lens correction).
 
 The scene-referred scheme imposed legacy, display-referred, modules to be sent at the end of the pipeline where they belonged. In a fixed pipeline, that would have requested to create duplicate modules, wire them where they belonged, and deprecate the previous. But then, some modules could have different and equally valid positions (LUTs). So the pipeline was made flexible, and modules were allowed to be moved, therefore associated with a priority. But then, the fixed assumptions needed to be made explicit, which uncovered a lot of silent bugs in the process.
 
-To this day, copy-pasting history stacks or applying styles, especially when multiple instances are used, may end in garbled pipeline order, but it's totally random and hardly reproduceable. 
+To this day, copy-pasting history stacks or applying styles, especially when multiple instances are used, may end in garbled pipeline order, but it's totally random and hardly reproduceable. These problems stem in the loss of generality (and a bit of lazyness) allowed when the early project of re-orderable pipeline was abandoned. 
+
+# Looking at the future through the past
+
+If we summarize, darktable has a major performance bottleneck through OpenCL and Gtk. Yes, OpenCL allows to unleash the power of the GPU, but it has an incompressible overhead of memory buffers copies. This is grounded in its architecture and will not be solved by another hack-in-place. The magnitude of the requested rewrite overcomes starting again fresh, not to mention the phase of instability it would init (we still haven't fully recovered from the pipe reordering yet…).
+
+A software is a tool. A tool is more than the sum of its functionalities. A Leatherman multi-tool or a Swiss Army knife are packed with functionalities. But at the price of being bulky, fragile and not really practical for accurate work. Usability is an overlooked concern, and runtimes contribute directly to it. It answers a simple question: can you use this tool comfortably for a long amount of time and meet your productivity constraints ?
+
+Modules like diffuse or sharpen have pushed the darktable's pipeline to its limits. And this is only mild supervised machine learning. What good would it do to keep loading this old beast ?
+
+But the most blocking thing is the non-destructive nature of darktable's work, which means "edits" are nothing but a cooking recipe until a program renders a base material applying this. Which means old recipes need to be rendered today the same as 10 years ago. This legacy to carry gives little room to cleanly fix core design mistakes, at most it ends into more heuristics trying to handle the old case and the new one, so more code, more burden, more bugs, less stability.
+
+Something has to give, all these constraints together are simply too much. darktable has been pushed already farther than what its initial design allowed.
+
+# What is development ?
+
+Behind the question "will darktable continue to be developed ?", I feel there is something misunderstood. A tool is developed until it fully fills its purpose. What is missing today in darktable ? 
+
+See, adding ever more features, in a true capitalistic powertrip, is not improving. At some point, when your trays, shelves, tables and stands are covered with tools and you can't find the one you need, you may have one of each of the most accurate and specialized tools, any additional productivity brought individually by each of these tools gets lost in the time you waste chasing them through your workshop every time you need one.
+
+If you keep on forced march, past feature-completeness, you end up making a toy, packed with exciting new features, that will not make you more productive but may well waste your time chasing features you need through the lot of useless ones swamping the GUI.
+
+Development is actively damaging stability and induces more maintenance work. It's literally work that will give more work. So development for the sake of development, or engineering for the sake of engineering, is madness and does users a disservice too.
+
+So, let's not mistake development with maintenance.
