@@ -48,19 +48,19 @@ To this day, copy-pasting history stacks or applying styles, especially when mul
 
 If we summarize, darktable has a major performance bottleneck through OpenCL and Gtk. Yes, OpenCL allows to unleash the power of the GPU, but it has an incompressible overhead of memory buffers copies. This is grounded in its architecture and will not be solved by another hack-in-place. The magnitude of the requested rewrite overcomes starting again fresh, not to mention the phase of instability it would init (we still haven't fully recovered from the pipe reordering yet…).
 
-A software is a tool. A tool is more than the sum of its functionalities. A Leatherman multi-tool or a Swiss Army knife are packed with functionalities. But at the price of being bulky, fragile and not really practical for accurate work. Usability is an overlooked concern, and runtimes contribute directly to it. It answers a simple question: can you use this tool comfortably for a long amount of time and meet your productivity constraints ?
+A software is a tool. A tool is more than the sum of its functionalities. A Leatherman multi-tool or a Swiss Army knife are packed with functionalities. But at the price of being bulky, fragile and not really practical for accurate work. Usability is an overlooked concern, and runtimes contribute directly to it. Usability answers a simple question: can you use this tool comfortably for a long amount of time and meet your productivity constraints ?
 
 Modules like diffuse or sharpen have pushed the darktable's pipeline to its limits. And this is only mild supervised machine learning. What good would it do to keep loading this old beast ?
 
 But the most blocking thing is the non-destructive nature of darktable's work, which means "edits" are nothing but a cooking recipe until a program renders a base material applying this. Which means old recipes need to be rendered today the same as 10 years ago. This legacy to carry gives little room to cleanly fix core design mistakes, at most it ends into more heuristics trying to handle the old case and the new one, so more code, more burden, more bugs, less stability.
 
-Something has to give, all these constraints together are simply too much. darktable has been pushed already farther than what its initial design allowed.
+Something has to give, all these constraints together are simply too much. darktable has been pushed already farther than what its initial design allowed. Moving from OpenCL to Vulkan, and replacing Gtk, and keeping compatibility with the youth mistakes of darktable from the 2010's is too much to ask from anyone. 
 
 # What is development ?
 
 Behind the question "will darktable continue to be developed ?", I feel there is something misunderstood. A tool is developed until it fully fills its purpose. What is missing today in darktable ? 
 
-See, adding ever more features, in a true capitalistic powertrip, is not improving. At some point, when your trays, shelves, tables and stands are covered with tools and you can't find the one you need, you may have one of each of the most accurate and specialized tools, any additional productivity brought individually by each of these tools gets lost in the time you waste chasing them through your workshop every time you need one.
+See, adding ever more features, in a true capitalistic powertrip, is not improving. At some point, when your trays, shelves, tables and stands are covered with the most accurate and specialized tools, any additional productivity brought individually by each of these tools gets lost in the time you waste chasing them through your workshop every time you need one. Rather keep their number under control, stick to general and all-purpose tools that complement each-other, and keep your tables for working instead of storing garbage.
 
 If you keep on forced march, past feature-completeness, you end up making a toy, packed with exciting new features, that will not make you more productive but may well waste your time chasing features you need through the lot of useless ones swamping the GUI.
 
