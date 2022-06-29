@@ -6,11 +6,23 @@ I started using darktable at version 0.9 circa 2010-11. I found it featured on P
 
 In the early 2010's, raw photographs had 12-16 Mpx and a crappy dynamic range that happened to be on-par with the one of the typical desktop display. darktable was designed for this : to work on CPU, with Gtk, on 10-12 MB files having a reduced dynamic range.
 
-As of 2022, it is still the only Linux photo editor that supports natively GPU hardware acceleration through OpenCL. But what was a luxury 10 years ago is now a requisite with 45-54 Mpx raw photographs, especially since usage got more demanding with heavier denoising, deblurring and missing parts reconstruction. Problem being Apple deprecated OpenCL circa 2020 in Mac OS, and even on Linux, AMD GPU OpenCL drivers (known to be the best 10 years before) are now very unreliable. Intel took its sweet time to get there, Beignet had never been usable, and Neo drivers work typically fine until some random update breaks them.
+As of 2022, it is still the only Linux photo editor that supports natively GPU hardware acceleration through OpenCL. But what was a luxury 10 years ago is now a requisite with 45-54 Mpx raw photographs, especially since usage got more demanding with heavier denoising, deblurring, missing parts reconstruction, masking and mask feathering.
 
 Not to mention, the raw files now have a dynamic range almost twice as large as the typical desktop monitor, which puts more pressure on the internal color science regarding color fidelity and predictability through intensive tone mapping. 
 
 Digikam, Rawtherapee, Lightzone and the others still haven't upgraded neither for GPU nor HDR processing abilities.
+
+# Early design choices: 2009-2013
+
+Without going in all the tedious details, darktable image processing features are organized around a modular pipeline where pixels are filtered sequentially through "modules" or "image operations" (IOP). Those can be seen as adjustment layers in raster editors like Photoshop, especially since they get an alpha (occlusion) channel and blending modes to perform basic compositing within the same image. Modules are self-enclosed, don't really see each other, and are driven from the pipeline. They also contain both the pixel code and the GUI code of the widget in which they appear in the UI.
+
+All IOP's pixel code is at least written in plain C99. Those make use of the OpenMP library for parallelism and multi-threading. Many IOP have also a redundant code path written with Intel SSE2 intrinsics, to take advantage of the SIMD instructions (vectorized) introduced with Intel Pentium 4. The SSE2 code is hard to read for non-specialists, even though it's still better than pure assembly, and you need the vanilla C99 to be able to debug and understand what it is doing. Then, some IOP have an OpenCL kernel, doing exactly the same thing as the C99 and SSE2 pathes but in another language. 
+
+Since all 3 pathes have different memory patterns and strategies, the code is not always translatable directly, sometimes the logic needs to be adapted to the memory layout for better performance. Also, GPU and CPU arithmetic are slightly different, especially for hardware-accelerated (and vendor-dependent) operations. Asserting the consistency of the image filters outputs, through all 3 code pathes, is a nightmare in itself. Integration tests, checking the output of OpenCL and C on test images, were introduced only circa 2019.
+
+The choice of OpenCL is not great, but there was not much else available at the time. Indeed, it is intended for numerical computation (like data crunching), and not for user interaction (that would be OpenGL). The logic of OpenCL is to "offload" a computational plan from the CPU to the GPU, meaning everything is controlled from and by the CPU, including buffer copies between system RAM and video RAM — big performance bottleneck.
+
+Since your HDMI socket is soldered on the GPU chip, it might make sense to fetch the picture straight on GPU and to send it directly to display, but OpenCL doesn't allow it. Anyway, the GUI is painted through Gtk, which works on CPU only, so the rendered image has to come back from GPU/OpenCL to the system RAM to be painted in the window by Gtk/CPU, only to be sent again to the GPU because… your HDMI socket is soldered on it anyway. Bottlenecks everywhere, but how to do this differently at the time ?
 
 # From usable to complete: 2013-2018
 
