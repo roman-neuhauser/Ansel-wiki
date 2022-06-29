@@ -78,7 +78,7 @@ Photo editing software have been split into the "virtual darkrooms" (Lightroom, 
 
 The film stocks looks have been replaced in digital by presets, color profiles (more or less opinionated). Only at the end of the 2020's, photographers started to get inspired by movies and work their color palette as a visual language. It took until 2020 or 2021 to Lightroom to introduce the color balance, similar to the star feature of Capture One, for color grading (don't tell them, but darktable had it since at least 2016). 
 
-On the other end, I think it's fair to say that smartphones have won the battle of the consumer/entry-level photography. We don't need to care about those anymore, they will never shoot raw. But among the raw shooters, there are still a bunch who make it a priority to open a complicated software only to get the exact same look as the out-of-camera JPEG, but photography being a sport of equipment, there is a status component.
+On the other end, I think it's fair to say that smartphones have won the battle of the consumer/entry-level photography. We don't need to care about those anymore, they will never shoot raw. But among the raw shooters, there are still a bunch who make it a priority to open a complicated software only to get the exact same look as the out-of-camera JPEG, but photography being a sport of equipment, there is a status component and you need to be a raw shooter in some circles.
 
 I wish to digital photography to become more than just a metaphor of analog, to embrace the digital medium to blur even more the boundaries between painting, drawing, still images, movies, to include sound, 3D renders, other images. All these technologies are workable within a computer, so they are all unified in the silicon box. 
 
