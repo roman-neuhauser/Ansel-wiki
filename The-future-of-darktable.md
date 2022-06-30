@@ -101,3 +101,5 @@ But it seems that hardcore professionals have actually simple DAM needs, in fact
 Abstracting file management through database allows users to shoot themselves by dumping all pictures in the same folder and index their pictures in virtual collections stored only in the database. That traps the user in the software and induces a high risk of data loss if any DB corruption happens. On the other hand, a sane (sub)-directory structure is application-agnostic and uses a very basic block of any computer.
 
 Workflow-wise, the post-processing app only needs to have a sort of bookmarking to keep track of which pictures are pending retouch, which are done, which have been exported, etc.
+
+To create "collections" (as Lightroom calls them), the minimalistic way is to assign a certain tag to pictures, and then query that tag when needed. 
