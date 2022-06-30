@@ -48,13 +48,15 @@ To this day, copy-pasting history stacks or applying styles, especially when mul
 
 If we summarize, darktable has a major performance bottleneck through OpenCL and Gtk. Yes, OpenCL allows to unleash the power of the GPU, but it has an incompressible overhead of memory buffers copies. This is grounded in its architecture and will not be solved by another hack-in-place. The magnitude of the requested rewrite overcomes starting again fresh, not to mention the phase of instability it would init (we still haven't fully recovered from the pipe reordering yet…).
 
-A software is a tool. A tool is more than the sum of its functionalities. A Leatherman multi-tool or a Swiss Army knife are packed with functionalities. But at the price of being bulky, fragile and not really practical for accurate work. Usability is an overlooked concern, and runtimes contribute directly to it. Usability answers a simple question: can you use this tool comfortably for a long amount of time and meet your productivity constraints ?
+A software is a tool. A tool is more than the sum of its functionalities. A Leatherman multi-tool or a Swiss Army knife are packed with functionalities, so why hasn't every handyman replaced his whole toolkit with a simple multi-tool ? Well, they are bulky, their ergonomics are not great, they are fragile and can't handle high torque on the screwdrivers… all in all, they aren't really practical for accurate work or regular extended use. Helpful in camping, but they won't replace full-handle tools.
+
+Usability is an overlooked concern, and runtimes contribute directly to it. Barely working is not enough. Usability answers a simple question: can you use this tool comfortably for a long amount of time and meet your productivity requirements ?
 
 Modules like diffuse or sharpen have pushed the darktable's pipeline to its limits. And this is only mild supervised machine learning. What good would it do to keep loading this old beast ?
 
 But the most blocking thing is the non-destructive nature of darktable's work, which means "edits" are nothing but a cooking recipe until a program renders a base material applying this. Which means old recipes need to be rendered today the same as 10 years ago. This legacy to carry gives little room to cleanly fix core design mistakes, at most it ends into more heuristics trying to handle the old case and the new one, so more code, more burden, more bugs, less stability.
 
-Something has to give, all these constraints together are simply too much. darktable has been pushed already farther than what its initial design allowed. Moving from OpenCL to Vulkan, and replacing Gtk, and keeping compatibility with the youth mistakes of darktable from the 2010's is too much to ask from anyone. 
+Something has to give, all these constraints together are simply too much. darktable has been pushed already farther than what its initial design allowed, in ways that have introduced architectural brittleness and a patchwork of ugly fixes. Moving from OpenCL to Vulkan, and replacing Gtk, and keeping compatibility with the youth mistakes of darktable from the 2010's is too much to ask from anyone. 
 
 # What is development ?
 
@@ -81,5 +83,7 @@ The film stocks looks have been replaced in digital by presets, color profiles (
 On the other end, I think it's fair to say that smartphones have won the battle of the consumer/entry-level photography. We don't need to care about those anymore, they will never shoot raw. But among the raw shooters, there are still a bunch who make it a priority to open a complicated software only to get the exact same look as the out-of-camera JPEG, but photography being a sport of equipment, there is a status component and you need to be a raw shooter in some circles.
 
 I wish to digital photography to become more than just a metaphor of analog, to embrace the digital medium to blur even more the boundaries between painting, drawing, still images, movies, to include sound, 3D renders, other images. All these technologies are workable within a computer, so they are all unified in the silicon box. 
+
+Being able to compose raw pictures directly in scene-referred is a must. As is painting over photographs in a scene-referred workflow, because it's the only simple and clean way to handle HDR without having to treat it like a disabled citizen with particular needs.
 
 I also wish it was easier for artists to create procedural images through scripting, like Brownian motion backgrounds or fractals, without being all the time dependent on what developers are willing to code them. Regular people are now playing with Arduino and Raspberry Pi for wearables and artistic projects, scripting procedural visual is very much in line with this.
