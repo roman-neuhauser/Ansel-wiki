@@ -1,4 +1,4 @@
-It's funny to see how people reacted to my fork and then to vkdt by asking questions about the future of darktable.
+It's funny to see how people reacted to my fork and then to vkdt by asking questions about the future of darktable, while frankly, nothing has changed and darktable's future has anyway never been guaranteed.
 
 # Backstory
 
