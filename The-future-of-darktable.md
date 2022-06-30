@@ -87,3 +87,15 @@ I wish to digital photography to become more than just a metaphor of analog, to 
 Being able to compose raw pictures directly in scene-referred is a must. As is painting over photographs in a scene-referred workflow, because it's the only simple and clean way to handle HDR without having to treat it like a disabled citizen with particular needs.
 
 I also wish it was easier for artists to create procedural images through scripting, like Brownian motion backgrounds or fractals, without being all the time dependent on what developers are willing to code them. Regular people are now playing with Arduino and Raspberry Pi for wearables and artistic projects, scripting procedural visual is very much in line with this.
+
+# About digital assets management (DAM)
+
+Digital assets management is the process of maintaining an archive of pictures in a way that allows efficient access and use. Unfortunately, use cases and needs vary greatly, and having discussed these matters extensively for 5 years with various crowds, everybody wants efficient DAM but nobody is able to say what it should do and how it should look.
+
+DAM also overlaps with the culling process, which consists in selecting the body of pictures that will get post-processing attention. 
+
+It's only lately with a couple of converging opinions, from old-time Adobe users, that I came to the conclusion that DAM doesn't need to be anything more than file management extended with XMP and EXIF support. The least it does, the better. It's just about being able to show a grid of thumbnails and run queries through files to search for tags or metadata. Then, let it be scriptable for niche uses and plugins.
+
+Abstracting file management through database allows users to shoot themselves by dumping all pictures in the same folder and index their pictures in virtual collections stored only in the database. That traps the user in the software and induces a high risk of data loss if any DB corruption happens. On the other hand, a sane (sub)-directory structure is application-agnostic and uses a very basic block of any computer.
+
+Workflow-wise, the post-processing app only needs to have a sort of bookmark to keep track of which pictures are pending retouch, which are done, which have been exported, etc.
