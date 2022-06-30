@@ -96,6 +96,8 @@ DAM also overlaps with the culling process, which consists in selecting the body
 
 It's only lately with a couple of converging opinions, from old-time Adobe users, that I came to the conclusion that DAM doesn't need to be anything more than file management extended with XMP and EXIF support. The least it does, the better. It's just about being able to show a grid of thumbnails and run queries through files to search for tags or metadata. Then, let it be scriptable for niche uses and plugins.
 
+But it seems that hardcore professionals have actually simple DAM needs, in fact much simpler than most amateurs, who have too much time on their hands to Hermione Granger the book-keeping with never-ending tagging.
+
 Abstracting file management through database allows users to shoot themselves by dumping all pictures in the same folder and index their pictures in virtual collections stored only in the database. That traps the user in the software and induces a high risk of data loss if any DB corruption happens. On the other hand, a sane (sub)-directory structure is application-agnostic and uses a very basic block of any computer.
 
-Workflow-wise, the post-processing app only needs to have a sort of bookmark to keep track of which pictures are pending retouch, which are done, which have been exported, etc.
+Workflow-wise, the post-processing app only needs to have a sort of bookmarking to keep track of which pictures are pending retouch, which are done, which have been exported, etc.
