@@ -108,7 +108,7 @@ All the remaining Lab modules that I have warned against for years are deprecate
 * split-toning,
 * velvia
 
-One of the most common questions, since the big scene-referred change, was "what modules should I avoid". Now, you don't need to ask.
+One of the most common questions, since the big scene-referred change, was "what modules should I avoid". Now, you don't need to ask. Despite what some people say, "deprecated" means the modules can't be found in UI for new edits, but they are still very much in the program and ready to serve for old edits that use them. So deprecating is just GUI cleaning.
 
 # What was changed from mainstream darktable
 
