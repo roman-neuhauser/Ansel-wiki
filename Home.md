@@ -85,7 +85,7 @@ Overall, 5 to 6 SQL requests per thumbnail per "mouse over" event are now spared
 * The option to display a mask button in module's header is removed and the button is always shown,
 * The option to display the scroll bars in lighttable and darkroom is removed, scrollbars will always appear in lighttable and will never appear in darkroom,
 * The option to favour speed at the expense of quality is removed (process downscaled thumbnails), quality is favoured.
-* The option to expand modules on "enable" event and collapse on "disable" event is removed, collapsed state is independent from enabled state.
+* The option to expand modules on "enable" event and collapse on "disable" event is removed, collapsed state is independent from enabled state (I was the author of that stupidity and even I grew weary of this).
 * The option to scroll to the expanded module is removed, expanded modules will always trigger a scroll to be fully visible in viewport.
 * The option to open only one module at a time is removed. Modules will never be auto-collapsed when a new module is expanded.
 
