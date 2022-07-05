@@ -48,4 +48,4 @@ If you want to use another configuration directory, for safety, you can R&Dt wit
 
 The R&Dt logo has been changed in-app such that you can easily identify in which app you are. The system icon may still be the upstream darktable one. This will gradually be improved.
 
-It is not recommended to install R&Dt nor dt in virtual machines since color management can't be ensured. Most display color profiles make use of the [VCGT](https://argyllcms.freelists.narkive.com/uTZlLmgY/vcgt-meaning-with-regard-to-the-icc-profile#post2) and it is not clear if VM can make proper use of it, which ultimately depends on how they support and access GPU drivers. 
+It is not recommended to install R&Dt nor dt in virtual machines since color management can't be ensured. Most display color profiles make use of the [VCGT](https://argyllcms.freelists.narkive.com/uTZlLmgY/vcgt-meaning-with-regard-to-the-icc-profile#post2) and it is not clear if VM can make proper use of it, which ultimately depends on how they support and access the GPU drivers of the host.
