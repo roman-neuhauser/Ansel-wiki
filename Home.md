@@ -8,13 +8,25 @@ The philosophy of R&Darktable is : 
 
 Rational & Darktable is a darktable fork with 21525 lines of bad code removed. _(Updated 23rd June 2022)_
 
-It runs slightly faster than upstream darktable and doesn't overwhelm users with loads of geeky options which don't make them more productive. It aims at doing the bare minimum really well instead of trying to (over)do everything at once in a sub-optimal way. It solves the long-standing problem of re-inventing basic GUI interaction in ways that are inconsistent with every operating system out there. 
+Only the general-purpose and robust features have been kept, in order to focus on efficient image-processing and reduce the overhead:
+
+1. **It runs slightly faster than upstream darktable**: although not the ultimate goal, removing GUI events leads to less CPU load
+2. **It provides a minimal set of tools and simplified GUI** and doesn't overwhelm users with loads of geeky options which don't make them more productive. 
+3. **It solves the long-standing problem of re-inventing basic GUI interaction** in ways that are inconsistent with every operating system and desktop environment out there. 
+4. **It keeps pixel code and pipeline compatibility with upstream darktable**: you choose your UI, not your pipeline.
 
 The reasons for having forked are detailed here:
 
 * [Why a fork ?](https://github.com/aurelienpierre/R-Darktable/wiki/Why-a-fork-%3F),
 * [Open source and professional photography : lies and wishes](https://eng.aurelienpierre.com/2022/06/open-source-and-professional-photography-lies-and-wishes/),
 * [Design by committee will not save FLOSS](https://eng.aurelienpierre.com/2022/06/design-by-committee-will-not-save-floss/).
+
+# What is **not** R&Darktable ?
+
+1. **It does not aim at making darktable faster** : the pixel pipeline code is exactly the same, and darktable already has a pipeline as fast as it will ever be under the architecture and design chosen in 2009. Improving performance is the goal of [vkdt](https://github.com/hanatos/vkdt), which will not be ready for production for at least a couple of years, and is a full rewrite with a different pipeline. But, of course, removing GUI bloat is going to speed some things up.
+2. **It is not a beginner-friendly photo-editing app** : the goal is to simplify the overhead, meaning everything not directly related to outputting processed images. That is software configuration/options, GUI disposition, file management, labels, etc. Color science is still what it is, and boy, it's no easy.
+3. **It is not a community project** : community is great, except when it grows too much too fast and you don't have any kind of management to keep a unified line of development and a consistent design. More people means more help until you reach a team of 4-5, above this you need to allocate resources to management, so more people means more work. This is exactly what has happened to darktable: lots of hype since v3.0 leading to 2 releases/year with almost 2000 commits in each, so everything gets merged too soon and more bugs are introduced than fixed at each release, all that to keep momentum.
+4. **It is not a hot project** : I consider darktable's development (and therefore R&Darktable's one) roughly 90% finished, meaning it's close to feature-complete. We are reaching the limits of its initial design & architecture regarding how much we can still extend it without actively harming performance and stability. The goal right now is to polish existing features, fix the worst usability pain points and the low-hanging fruits, then keep it stable pending [vkdt](https://github.com/hanatos/vkdt)'s availability.
 
 # Support
 
