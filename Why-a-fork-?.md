@@ -4,7 +4,7 @@
 2. the darktable team is getting distracted by niche features and cosmetics while forgetting the real goal of the application: culling what came out of the camera/memory card and outputting post-processed images,
 3. every attempt of redesign ends in threads flooded with irrelevant statements and unqualified opinions where past mistakes are used as precedent to keep digging in the same hole,
 3. the darktable team sees no problem with the three previous statements,
-4. there is no reason to think that it will ever change.
+4. there is no reason to think that it will ever change after having tried too many times.
 
 # Details
 
