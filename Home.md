@@ -10,6 +10,12 @@ Rational & Darktable is a darktable fork with 21525 lines of bad code removed. _
 
 It runs slightly faster than upstream darktable and doesn't overwhelm users with loads of geeky options which don't make them more productive. It aims at doing the bare minimum really well instead of trying to (over)do everything at once in a sub-optimal way. It solves the long-standing problem of re-inventing basic GUI interaction in ways that are inconsistent with every operating system out there. 
 
+The reasons for having forked are detailed here:
+
+* [Why a fork ?](https://github.com/aurelienpierre/R-Darktable/wiki/Why-a-fork-%3F),
+* [Open source and professional photography : lies and wishes](https://eng.aurelienpierre.com/2022/06/open-source-and-professional-photography-lies-and-wishes/),
+* [Design by committee will not save FLOSS](https://eng.aurelienpierre.com/2022/06/design-by-committee-will-not-save-floss/).
+
 # Support
 
 So far, R&Darktable is pretty close to upstream darktable (see the details of the changes below), so there is no reason to get excited. There are no packages yet and it's a work in progress. If you need help with something, please use the Matrix channels:
