@@ -1,7 +1,7 @@
 # TL;DR
 
-1. the darktable team is violating every best practice of rational design and engineering : focus first on the problem to solve from the user-perspective, deal with the technicalities later,
-2. the darktable team is getting distracted by niche features and cosmetics while forgetting the real goal of the application : culling what came out of the SD card and outputting post-processed images,
+1. the darktable team is violating every best practice of rational design and engineering: focus first on the problem to solve from the user-perspective, deal with the technicalities later,
+2. the darktable team is getting distracted by niche features and cosmetics while forgetting the real goal of the application: culling what came out of the SD card and outputting post-processed images,
 3. the darktable team sees no problem with the two previous statements,
 4. there is no reason to think that it will ever change.
 
