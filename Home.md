@@ -28,12 +28,16 @@ The reasons for having forked are detailed here:
 3. **It is not a community project** : community is great, except when it grows too much too fast and you don't have any kind of management to keep a unified line of development and a consistent design. More people means more help until you reach a team of 4-5, above this you need to allocate resources to management, so more people means more work. This is exactly what has happened to darktable: lots of hype since v3.0 leading to 2 releases/year with almost 2000 commits in each, so everything gets merged too soon and more bugs are introduced than fixed at each release, all that to keep momentum.
 4. **It is not a hot project** : I consider darktable's development (and therefore R&Darktable's one) roughly 90% finished, meaning it's close to feature-complete. We are reaching the limits of its initial design & architecture regarding how much we can still extend it without actively harming performance and stability. The goal right now is to polish existing features, fix the worst usability pain points and the low-hanging fruits, then keep it stable pending [vkdt](https://github.com/hanatos/vkdt)'s availability. But the darktable's team does not want to hear it and wants to keep adding as much as possible in it.
 
+See also : [The future of darktable](https://github.com/aurelienpierre/R-Darktable/wiki/The-future-of-darktable).
+
 # Support
 
 So far, R&Darktable is pretty close to upstream darktable (see the details of the changes below), so there is no reason to get excited. There are no packages yet and it's a work in progress. If you need help with something, please use the Matrix channels:
 
 * In English : https://matrix.to/#/#r&darktable-en:matrix.org
 * En Français : https://matrix.to/#/#r&darktable-fr:matrix.org
+
+R&Darktable builds the same and with the same dependency stack as upstream darktable, see [how to build](https://github.com/aurelienpierre/R-Darktable/wiki/Building-R&Darktable).
 
 # Roadmap
 
