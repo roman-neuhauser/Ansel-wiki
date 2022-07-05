@@ -6,7 +6,10 @@
 3. the darktable team sees no problem with the three previous statements,
 4. after several tries, there is no reason to think that it will ever change, and ill-designed features keep piling (lighttable overlays, module groups, collections filters),
 5. going forward, there is no solution ahead that doesn't involve compromising usability, and no reason to keep on trying. Irreconcilable priorities need to end in break-up.
-6. anyway, the darktable project has become a victim of its hype and reached a number of contributors incompatible with its present form of management (aka none) or design vision (again, none), which ends in [design by committee](https://en.wikipedia.org/wiki/Design_by_committee). 
+6. anyway, the darktable project has become a victim of its hype and reached a number of contributors incompatible with its present form of management (aka none) or design vision (again, none), which ends in [design by committee](https://en.wikipedia.org/wiki/Design_by_committee) riddled with [groupthink](https://en.wikipedia.org/wiki/Groupthink). The internet is full of examples showing why design by committee is damaging despite its benevolence:
+   * https://blog.codinghorror.com/the-pontiac-aztek-and-the-perils-of-design-by-committee/
+   * https://www.productplan.com/learn/how-to-avoid-design-by-committee/
+   * https://medium.com/swlh/how-to-avoid-design-by-committee-and-why-you-should-at-all-costs-8e8ce78c1058
 
 # Details
 
