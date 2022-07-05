@@ -23,3 +23,29 @@ The `dev` branch is basically R&Darktable's `master` in which I merge the topic
 R&Darktable uses the same scripts and building stack as upstream darktable, so everything works the same but you need to be aware that it will get installed in place of darktable and as darktable, so it uses the same pathes and default config/database directories. The CLI commands are all the same and R&Darktable will be registered as darktable as far as your OS is concerned.
 
 I'm not sure at this point if it's worth it or even desirable to have it installed somewhere else and using different config pathes and CLI commands.
+
+# Installing R&Dt alongside upstream darktable
+
+It is possible to install both alongside but you need to manually change the installation directory, like such : 
+
+```shell
+./build.sh --prefix /opt/rdarktable --build-type Release --install --sudo
+```
+
+Then start the app with:
+
+```shell
+/opt/rdarktable/bin/darktable
+```
+
+while the upstream darktable variant would be started simply with `darktable` or `/opt/darktable/bin/darktable`.
+
+If you want to use another configuration directory, for safety, you can R&Dt with:
+
+```shell
+/opt/rdarktable/bin/darktable --configdir "~/.config/darktable-test"
+```
+
+The R&Dt logo has been changed in-app such that you can easily identify in which app you are. The system icon may still be the upstream darktable one. This will gradually be improved.
+
+It is not recommended to install R&Dt nor dt in virtual machines since color management can't be ensured. Most display color profiles make use of the [VCGT](https://argyllcms.freelists.narkive.com/uTZlLmgY/vcgt-meaning-with-regard-to-the-icc-profile#post2) and it is not clear if VM can make proper use of it, which ultimately depends on how they support and access GPU drivers. 
