@@ -6,6 +6,7 @@
 3. the darktable team sees no problem with the three previous statements,
 4. after several tries, there is no reason to think that it will ever change, and ill-designed features keep piling (lighttable overlays, module groups, collections filters),
 5. going forward, there is no solution ahead that doesn't involve compromising usability, and no reason to keep on trying. Irreconcilable priorities need to end in break-up.
+6. anyway, the darktable project has become a victim of its hype and reached a number of contributors incompatible with its present form of management (aka none) or design vision (again, none), which ends in [design by committee](https://eng.aurelienpierre.com/2022/06/design-by-committee-will-not-save-floss/). 
 
 # Details
 
