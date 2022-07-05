@@ -1,3 +1,12 @@
+# TL;DR
+
+1. the darktable team is violating every best practice of rational design and engineering : focus first on the problem to solve from the user-perspective, deal with the technicalities later,
+2. the darktable team is getting distracted by niche features and cosmetics while forgetting the real goal of the application : culling what came out of the SD card and outputting post-processed images,
+3. the darktable team sees no problem with the two previous statements,
+4. there is no reason to think that it will ever change.
+
+# Details
+
 Even I don't have the slightest idea of what many preferences in darktable do. The problem is all those preferences/options trigger special behaviours that may interfere with each other and produce edge cases (heuristics) difficult to predict, debug, refactor and simplify. They make the code hard to read and therefore hard to maintain. But "cool new stuff" is favoured over maintainability and ease of use, and I'm against adding more code that will add more problems that will need more code to fix, because it obviously is a self-feeding loop of madness.
 
 But that wouldn't be so bad if so many changes since 2020 hadn't been just options for the sake of it. Triple click support in shortcuts declaration ? Timeline view ? Modules groups with presets ? Lighttable overlays options ? Nobody needed them, which would be fine if most of them were not broken in subtle ways (look out for "I don't reproduce" or "works for me").
