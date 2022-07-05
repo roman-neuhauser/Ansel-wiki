@@ -13,7 +13,7 @@ Only the general-purpose and robust features have been kept, in order to focus o
 1. **It runs slightly faster than upstream darktable**: although not the ultimate goal, removing GUI events leads to less CPU load
 2. **It provides a minimal set of tools and simplified GUI** and doesn't overwhelm users with loads of geeky options which don't make them more productive. 
 3. **It solves the long-standing problem of re-inventing basic GUI interaction** in ways that are inconsistent with every operating system and desktop environment out there. 
-4. **It keeps pixel code and pipeline compatibility with upstream darktable**: you choose your UI, not your pipeline.
+4. **It keeps pixel code and pipeline compatibility with upstream darktable**: you have the choice of your UI, you keep the compatibility of your edits.
 
 The reasons for having forked are detailed here:
 
