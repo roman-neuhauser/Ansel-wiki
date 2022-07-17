@@ -20,7 +20,11 @@ The `dev` branch is basically R&Darktable's `master` in which I merge the topic
 
 # Actually installing R&Darktable
 
-R&Darktable uses the same scripts and building stack as upstream darktable, so everything works the same but you need to be aware that it will get installed in place of darktable and as darktable, so it uses the same pathes and default config/database directories. The CLI commands are all the same and R&Darktable will be registered as darktable as far as your OS is concerned.
+R&Darktable uses the same scripts and building stack as upstream darktable, so everything works the same but you need to be aware that it will get installed in place of darktable and as darktable, so it uses the same pathes and default config/database directories. The CLI commands are all the same and R&Darktable will be registered as darktable as far as your OS is concerned:
+
+```shell
+./build.sh --build-type Release --install --sudo --clean-all
+```
 
 I'm not sure at this point if it's worth it or even desirable to have it installed somewhere else and using different config pathes and CLI commands.
 
@@ -29,7 +33,7 @@ I'm not sure at this point if it's worth it or even desirable to have it install
 It is possible to install both alongside but you need to manually change the installation directory, like such : 
 
 ```shell
-./build.sh --prefix /opt/rdarktable --build-type Release --install --sudo
+./build.sh --prefix /opt/rdarktable --build-type Release --install --sudo --clean-all
 ```
 
 Then start the app with:
