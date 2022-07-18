@@ -12,7 +12,7 @@ The first step of R&Dt design process is to submit an issue with a feature reque
 
 ## Solutions come second
 
-When the definition and scope of the problem is agreed upon between the people involved in the discussion, solutions may be proposed. Further discussion may be necessary to evaluate the drawbacks and benefits of each solution, after the best one solution will be adopted.
+When the definition and scope of the problem is agreed upon between the people involved in the discussion, solutions may be proposed. Further discussion may be necessary to evaluate the drawbacks and benefits of each solution, leading to the best solution being adopted on principle.
 
 Adopted solutions will lead to the issue getting triaged in the [project management Kanban board](https://github.com/users/aurelienpierre/projects/1/views/1).
 
@@ -32,13 +32,17 @@ When the prototype pull request is reviewed and if it fits the [code quality sta
 
 Approved pull requests will be merged early in the `candidate` branch for testing. This branch will always be the master branch with all pull requests pending validation on top. This is meant to help testing from people who are not necessarily up-to-speed with manual git branches merging. Unlike the `dev` branch, `candidate` should not break your edits.
 
-If no bug or breakage is reported after some time, they will get merged in `master` and the related issues will be closed and moved to the "Done" column of the [project management Kanban board](https://github.com/users/aurelienpierre/projects/1/views/1).
+If no bug or breakage is reported after some time and the prototype fulfils its initial purpose correctly, it will get merged in `master` and the related issue will be closed and moved to the "Done" column of the [project management Kanban board](https://github.com/users/aurelienpierre/projects/1/views/1).
+
+If the prototype proves itself unsatisfactory, it may be rejected and another one will need to be worked out.
 
 ## When contributors want to go freestyle
 
-If you don't follow those steps, you lose my and everybody's time, you piss me off and get called names.
+If you don't follow those steps, you lose my and everybody's time, you piss me off and you get called names.
 
-PR that don't come from an issue following those steps will be refused systematically with no exception. Don't ever start working on a PR before the connected issue is in the "To do" column of the Kanban board, because it means there is no adopted solution so you will most likely lose your time.
+PR that don't come from an issue following those steps will be refused systematically with no exception. 
+
+Don't ever start working on a PR before the connected issue is in the "To do" column of the Kanban board, because it means there is no adopted solution so you will most likely lose your time.
 
 # Bugs
 
