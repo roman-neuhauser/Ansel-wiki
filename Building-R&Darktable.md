@@ -10,6 +10,14 @@ __R&Darktable exists for now only in the [master branch](https://github.com/aure
 
 Keep in mind that the difference between R&Darktable and darktable is only in the GUI code and in some presets/preferences. Pixel modules are the same. In any case, the master branch is still an unstable branch (as in "the branch where new stuff gets merged for general testing, pending a release") both on upstream darktable and here.
 
+# Building R&Darktable with features pending validation
+
+TL;DR: `git checkout candidate` or `git pull https://github.com/aurelienpierre/R-Darktable.git candidate`
+
+New features and changes affecting UI but not the pixel pipeline (so, not likely to break your edits… but we never know…) have an intermediate validation step before getting merged in `master`: the validation step. To know what features are currently in this branch (in addition of everything already in `master`) you may visit the [project management Kanban board](https://github.com/users/aurelienpierre/projects/1/views/1), at the column "Testing".
+
+When such features are tested enough, their code goes in `master` and their issues goes in the "Done" column of the Kanban board.
+
 # Building R&Darktable with bleeding edge stuff
 
 TL;DR: `git checkout dev` or `git pull https://github.com/aurelienpierre/R-Darktable.git dev`
