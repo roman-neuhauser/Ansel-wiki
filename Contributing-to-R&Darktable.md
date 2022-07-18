@@ -30,9 +30,11 @@ Approved pull requests will be merged early in the `candidate` branch for testin
 
 If no bug or breakage is reported after some time, they will get merged in `master` and the related issues will be closed and moved to the "Done" column of the [project management Kanban board](https://github.com/users/aurelienpierre/projects/1/views/1).
 
-## When steps get mixed
+## When contributors want to go freestyle
 
 If you don't follow those steps, you lose my and everybody's time, you piss me off and get called names.
+
+PR that don't come from an issue following those steps will be refused systematically with no exception. Don't ever start working on a PR before the connected issue is in the "To do" column of the Kanban board, because it means there is no adopted solution so you will most likely lose your time.
 
 # Bugs
 
