@@ -1,11 +1,11 @@
 # TL;DR
 
 1. the darktable team is violating every best practice of rational design and engineering: focus first on the problem to solve from the user-perspective, deal with the technicalities later, never start designing a solution before being done defining the problem and its context, and first and foremost : KEEP IT STUPID SIMPLE !
-2. the darktable team is getting distracted by niche features and cosmetics while forgetting the real goal of the application: culling what came out of the camera/memory card and outputting post-processed images as fast and as good as possible,
+2. the darktable team is getting distracted by niche features and cosmetics while forgetting the real goal of the application: culling what came out of the camera's memory card and outputting post-processed images as fast and as good as possible,
 3. every attempt of redesign ends in threads flooded with irrelevant statements and unqualified opinions where past mistakes are used as precedent to keep digging in the same hole,
-3. the darktable team sees no problem with the three previous statements,
-4. after several tries, there is no reason to think that it will ever change, and ill-designed features keep piling (lighttable overlays, module groups, collections filters),
-5. going forward, there is no solution ahead that doesn't involve compromising usability, and no reason to keep on trying. Irreconcilable priorities need to end in break-up.
+3. the darktable team sees no problem with the three previous statements, so why change anything ? Everything is as good as it will ever be.
+4. after several tries, there is no reason to think that it will ever change, and ill-designed features keep on piling (lighttable overlays, module groups, collections filters), harming both usability and performance for the sake of secondary fancy features,
+5. going forward, there is no future that doesn't involve compromising usability, and no reason to keep on trying. Irreconcilable priorities need to end in break-up.
 6. anyway, the darktable project has become a victim of its hype and reached a number of contributors incompatible with its present form of management (aka none) or design vision (again, none), which ends in [design by committee](https://en.wikipedia.org/wiki/Design_by_committee) riddled with [groupthink](https://en.wikipedia.org/wiki/Groupthink). The internet is full of examples showing why design by committee is damaging despite its benevolence:
    * https://blog.codinghorror.com/the-pontiac-aztek-and-the-perils-of-design-by-committee/
    * https://www.productplan.com/learn/how-to-avoid-design-by-committee/
