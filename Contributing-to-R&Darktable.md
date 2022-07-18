@@ -26,7 +26,13 @@ When the prototype pull request is reviewed and if it fits the [code quality sta
 
 ## Validation comes fourth
 
-Approved pull requests will be merged early in the `testing` branch for testing. If no bug or breakage is reported after some time, they will get merged in `master` and the related issues will be closed and moved to the "Done" column of the [project management Kanban board](https://github.com/users/aurelienpierre/projects/1/views/1).
+Approved pull requests will be merged early in the `candidate` branch for testing. This branch will always be the master branch with all pull requests pending validation on top. This is meant to help testing from people who are not necessarily up-to-speed with manual git branches merging. Unlike the `dev` branch, `candidate` should not break your edits.
+
+If no bug or breakage is reported after some time, they will get merged in `master` and the related issues will be closed and moved to the "Done" column of the [project management Kanban board](https://github.com/users/aurelienpierre/projects/1/views/1).
+
+## When steps get mixed
+
+If you don't follow those steps, you lose my and everybody's time, you piss me off and get called names.
 
 # Bugs
 
