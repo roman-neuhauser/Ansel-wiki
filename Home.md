@@ -73,8 +73,9 @@ That is to say, I will pick here the low-hanging fruits, fix what can be easily
 * the [second darkroom window](https://docs.darktable.org/usermanual/3.8/en/darkroom/darkroom-view-layout/) : darktable is slow enough with 2 pipelines (thumbnail & preview), a third one is not realistic. This should have been the main preview redirected to another window but the code has been hastily hacked by copy-pasting, it's terrible. Also there is no traceability on which display profile will be used. LOSS OF CPU CYCLES.
 * the block and timeout overlay mode in lighttable : terrible code for something never used. USELESS.
 * the extended overlays mode for thumbnails: each of the EXIF metadata display triggered its own SQL request per-thumbnail. LOSS OF CPU CYCLES.
-* the non-dynamic culling mode and the zoomable lighttable view : they are not really used and need a lot of spaghetti code to be handled. DANGEROUS and USULESS.
+* the non-dynamic culling mode and the zoomable lighttable view : they are not really used and need a lot of spaghetti code to be handled. DANGEROUS and USELESS.
 * the dark and icon themes : dark themes trigger all sorts of unwanted visual illusions that make color assessment impossible. DANGEROUS.
+* the ability to assign keyboard shortcuts to Gtk notebook tabs, as well as switching tabs by mouse scroll, has been removed. USELESS and INCONSISTENT WITH UI PRINCIPLES.
 
 Overall, 5 to 6 SQL requests per thumbnail per "mouse over" event are now spared, due to the features removed.
 
@@ -115,11 +116,15 @@ One of the most common questions, since the big scene-referred change, was "what
 * In lighttable, the "mouse over" event now does not select images for writing and possibly harmful operation (writing metadata, copying history stack, deleting/moving files, applying styles, rating, labelling, tagging etc.). These events trigger only safe read-only events  in the metadata display module.
 * Similarly, the modules like tagging, geotagging, etc. that reacted to the "mouse over" event (by updating their content) now only react to selection (click or key stroke). This saves many SQL requests to read metadata when moving the mouse in lighttable and improves responsiveness.
 * The "copy all" history stack now copies and pastes white balance too.
-* The CSS animations have been removed. Animations are basically videos that need to be computed at 30 FPS while Gtk is only single-threaded on CPU.
+* The CSS animations have been removed. Animations are basically videos that need to be computed at 30 FPS while Gtk is only single-threaded on CPU,
+* The mouse scroll will scroll the content of the container (sidebars) and will not be captured by sliders, unless sliders got clicked over first (or used through keyboard shortcuts). This restores the intuitive and common behaviour of a mouse scroll and protects from unwanted setting changes. See #11.
 
 ## Widgets
 
-* The export module is moved to the left sidebar in darkroom and in lighttable, for consistency,
+* Modules names, buttons and section labels have their initial letter capitalized programmatically as grammar and typography rules suggests for better visual cues and for consistency with the rest of the world. This does not break translations but may trigger weird behaviours with non-european languages (untested).
+* The "export" module is moved to the left sidebar in lighttable, for consistency with import, collect, etc.
+* The "export" and "tagging" modules are removed from darkroom, since they are DAM features.
+* "import" module renamed "open & import", its buttons renamed "open from disk" and "import from camera",
 * "collections" module renamed "collect",
 * "history stack" module renamed "apply development",
 * "geotagging" module renamed "edit geo tags",
