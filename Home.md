@@ -6,7 +6,7 @@ The philosophy of R&Darktable is : 
 
 # What is R&Darktable ?
 
-Rational & Darktable is a darktable fork with 21525 lines of bad code removed. _(Updated 23rd June 2022)_
+Rational & Darktable is a darktable fork with 22229 lines of bad code removed. _(Updated 19th July 2022)_
 
 Only the general-purpose and robust features have been kept, in order to focus on efficient image-processing and reduce the overhead:
 
@@ -76,6 +76,7 @@ That is to say, I will pick here the low-hanging fruits, fix what can be easily
 * the non-dynamic culling mode and the zoomable lighttable view : they are not really used and need a lot of spaghetti code to be handled. DANGEROUS and USELESS.
 * the dark and icon themes : dark themes trigger all sorts of unwanted visual illusions that make color assessment impossible. DANGEROUS.
 * the ability to assign keyboard shortcuts to Gtk notebook tabs, as well as switching tabs by mouse scroll, has been removed. USELESS and INCONSISTENT WITH UI PRINCIPLES.
+* the VIM-style shortcuts : feature never documented that still listens to all keystrokes and applies its checks. 
 
 Overall, 5 to 6 SQL requests per thumbnail per "mouse over" event are now spared, due to the features removed.
 
