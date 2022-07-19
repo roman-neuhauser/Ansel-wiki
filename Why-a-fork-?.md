@@ -34,3 +34,17 @@ Basically, git pulling darktable now is an anxiety-triggering task meant to answ
 Trying to solve all that upstream has failed because old-time users have grown fond of all the quirks and we can't even agree on a definition of the problems through endless threads where mock-ups and sketches appear before we even know what specific problem we need to solve for what specific type of user. I have grown weary and tired of that nonsense. I have no faith in a team of amateur photographers playing amateur devs to ever improve UI and I'm tired of arguing with people who think designing is just drawing mock-ups and will not take it seriously.
 
 Let's do less better. That is, remove the bloat, stop trying to account for every anecdotal sub-optimal workflow, and make actual management choices and decisions to build a consistent set of tools for a bunch of real, defined, use cases.
+
+# The one about compromise
+
+Compromise is a bullshit buzzword that people are taught to like even though they never questioned its premisses. Compromise is when everybody have their needs only met half-way, which is supposed to maintain unity by sharing equally half of the losses. Though half-satisfied may well equate to fully frustrated, by the rules of the arithmetic of needs.
+
+See, if tonight my wife wants to go to the cinema and I want to go to the restaurant, we have incompatible needs that must be resolved. The compromise would be to go the restaurant, have half a meal, then go to the cinema and watch the end of the movie. That's a shitty time for both : better stay home and do nothing, it will cost less. That's compromise.
+
+Now, if we back up a bit, and dig deeper into our respective needs, we might find out that I want the restaurant because I'm too tired to cook tonight, let alone do the dishes, and she wants the cinema just to venture in imaginary worlds. Now that we have our real needs expressed, it's easy to fix because we actually want the same thing : to relax. The solution is to order food to take out and have a Netflix-and-chill at home. If she wants the cinema because there is this movie she really wants to see and it's the last day it's displayed, the fix is to fast-food somewhere and go watch it.
+
+See, nobody has a **need** to go to the restaurant or to the cinema, per-se. The need is on the experience that these places give you: relax and forget your day, perhaps even get pampered and cared for. So the way of avoiding compromise is to dig deeper into those real needs, beyond the needs people expressed. And compromise should be avoided, and since that takes some skill and time, compromise is chosen by default.
+
+But there might be cases where the real needs are still incompatible after careful analyses, in which case compromise is the only way to go. However, if your whole interaction mode with your significant other (or whatever social group you are in) ends up in systematic compromise, and you start compromising on the important things, you need to reevaluate the very existence of your relationship because it's fulfilling for nobody. But the fear of ending up alone is stronger for most people than the promise of having a more satisfying life, so people make up all sorts of excuse to not do it and to preserve the "unity of the community" above everything else, including the basic needs and happiness of its members.
+
+Which is crazy. 
