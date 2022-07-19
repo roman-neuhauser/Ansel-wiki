@@ -48,3 +48,11 @@ See, nobody has a **need** to go to the restaurant or to the cinema, per-se. The
 But there might be cases where the real needs are still incompatible after careful analyses, in which case compromise is the only way to go. However, if your whole interaction mode with your significant other (or whatever social group you are in) ends up in systematic compromise, and you start compromising on the important things, you need to reevaluate the very existence of your relationship because it's fulfilling for nobody. But the fear of ending up alone is stronger for most people than the promise of having a more satisfying life, so people make up all sorts of excuse to not do it and to preserve the "unity of the community" above everything else, including the basic needs and happiness of its members.
 
 Which is crazy. 
+
+How does that relate to software development ?
+
+Compromise in software ends in allowing everything, *optionnaly*. I have zero faith in trying to design one-size-fits-all software supposed to cover the needs of everybody by cramming them with options until you have 12 pages of configuration for every fucking feature. If people have different needs, build them different applications. 
+
+If software was not programmed with the ass, and GUI code was not deeply interleaved with core, it would be possible to inherit the core (as a framework) and re-interface it with whatever you like to build specialized apps from the same core. Once you specialize the app, you get plenty of opportunities for local optimizations and UX fine-tuning that are simply impossible if you need to account for all the possible use cases and combinations of options. 
+
+And, no, it's not as difficult as people think. If the base code is clean, that is. 
