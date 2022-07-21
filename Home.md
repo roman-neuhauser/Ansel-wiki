@@ -155,4 +155,4 @@ The purpose of these changes is to have a "file" left sidebar in lighttable (imp
 
 * In the scene-referred workflow, the base presets have been changed like follow:
   * in exposure module, the exposure boost has been changed from +0.5 to +0.7 EV,
-  * in filmic module, the contrast is changed to 1, latitude is set to 0.01% (which practically disables it — doesn't matter for v6), and the interpolation spline is set to back to "hard" (fourth order polynomial with C2 connectivity condition).
+  * in filmic module, the contrast is changed to 1, latitude is set to 0.01% (which practically disables it — doesn't matter for v6), and the interpolation spline is set to back to "hard" (fourth order polynomial with $C^2$ connectivity condition).
