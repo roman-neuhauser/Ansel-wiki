@@ -91,22 +91,34 @@ Overall, 5 to 6 SQL requests per thumbnail per "mouse over" event are now spared
 
 # Modules deprecated
 
-All the remaining Lab modules that I have warned against for years are deprecated, as well as the not-so-good RGB ones. Namely:
+All the remaining Lab modules that I have warned against for years are deprecated, namely:
 
-* bloom,
-* raw chromatic aberrations,
-* contrast, lightness, saturation,
-* colorize,
-* color mapping,
-* high-pass,
-* low light,
-* low-pass,
-* raw denoise,
-* shadows and highlights,
-* sharpen
-* soften,
-* split-toning,
-* velvia
+* bloom, *(replaced by diffuse or sharpen, preset blooming)*
+* raw chromatic aberrations, *(replaced by RGB chromatic aberrations)*
+* contrast, lightness, saturation, *(replaced by filmic and color balance)*
+* colorize, *(replaced by color balance)*
+* color contrast, *(replaced by color balance)*
+* color correction, *(replaced by color balance)*
+* color mapping, *(replaced by color mapping features in exposure and color calibration)*
+* color reconstruction, *(replaced by filmic color reconstruction, "high quality reconstruction" method)*
+* high-pass, *(replaced by diffuse or sharpen, various deblurring presets)*
+* levels, *(replaced by filmic, white and black relative exposures settings)*
+* low light, *(replaced by color balance)*
+* low-pass, *(replaced by blurs)*
+* monochrome, *(replaced by color calibration, "grey" tab, and various film-emulation presets)*
+* raw denoise, *(replaced by denoise profiled)*
+* shadows and highlights, *(replaced by tone equalizer and local contrast)*
+* sharpen, *(replaced by diffuse or sharpen, various deblurring presets)*
+* soften, *(replaced by diffuse or sharpen, blooming preset)*
+* split-toning, *(replaced by color balance)*
+* tone curve, *(replaced by tone equalizer, filmic and color balance)*
+* velvia. *(replaced by color balance)
+
+The display-referred RGB modules have been deprecated too:
+
+* base curve, *(replaced by filmic)*
+* RGB levels, *(replaced by filmic, white and black relative exposures settings)*
+* RGB curves, *(replaced by tone equalizer, filmic and color balance)*
 
 One of the most common questions, since the big scene-referred change, was "what modules should I avoid". Now, you don't need to ask. Despite what some people say, "deprecated" means the modules can't be found in UI for new edits, but they are still very much in the program and ready to serve for old edits that use them. So deprecating is just GUI cleaning.
 
