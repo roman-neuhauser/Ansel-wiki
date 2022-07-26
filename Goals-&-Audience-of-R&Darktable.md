@@ -18,12 +18,37 @@ R&Darktable aims at being an instrument of visual expression letting artists dev
 
 Although film and the analogue legacy is often used as an inspiration and as a starting point/first base, making digital image processing a 1:1 virtual translation of analogue printing is not the goal. Let us not forget that film was engineered within the technical limitations of dyes and chemicals, and that many of its beloved properties are actually limitations of its technology (which is not to say that don't have expressive merits, but let's not fall into backward-looking for the sake of it), and were not actually desired in the first place.
 
+However, much like music, it is expected from users to complete at least a basic theoretical and practical training to be able to use this imaging instrument, and R&Darktable will not give up visual quality for the sake of smoothing the learning curve.
+
 ## User-level goal of R&Darktable
 
 1. Allow to efficiently cull the photographs coming out of the camera/memory card, in order to pick only the ones worthy of being fully post-processed,
 2. Allow to edit/retouch the culled photographs in the most direct way, with a minimal number of steps, using unit image controls that affect only one perceptual or optical property at a time,
 3. Allow indexing and later retrieval of the processed photographs for archival purposes.
 
-
 # Supported workflows
  
+Any tool can only be made optimal for a single and definite use case. Supporting too many uses cases will prevent optimization at all. This is where upstream darktable miserably failed. The workflows presented below are the intended uses for R&Darktable. Any use that deviates from these may be possible but is not recommended and nothing will be made to actively support it.
+
+
+## Culling workflow
+
+1. The user will mount the file system of the camera or the memory card using the OS tools (MTP/PTP protocols, FAT/exFAT file systems),
+2. The user will import the pictures in individual directories named like `YEAR-MONTH-DAY-Job name`. The pictures will use unique names like `Job name-ID number.extension`. Those directories will be used in R&Darktable as the parent path for "filmrolls" and opened in lighttable once pictures are imported. Filmrolls may or may not contain the whole content of their associated directory.
+3. The user will proceed to the culling part. Images are imported with a rating of 0 star. Obviously bad pictures will be rejected (shortcut : <kbd>R</kbd>). 2 methods can then be used : 
+   1. negative : assign an high star-rating to all pictures, and gradually downgrade bad pictures, so only the keepers keep their high rating,
+   2. positive : assign a 1-star-rating to all the seemingly-good pictures, then assign a 2-star rating only to the best of the 1-star-rated, and carry-on until reaching 5 stars or any rating where an appropriate amount of keepers is left,
+4. From there, the highest-rated images are considered keepers and may be edited. [Batch-editing features](https://docs.darktable.org/usermanual/4.0/en/guides-tutorials/batch-editing/) that may speed-up this step for series are presented on upstream darktable's manual.
+5. Tracking the state of pictures in the workflow can be made through the darktable internal tags `darktable|changed`, `darktable|exported`, `darktable|printed`, which are set automatically when these operations are done. Users needing more states, like those who edit in several steps (one step of basic editing, for better preview during culling, another step of full editing), may add more children tags to the `darktable` parent tag, like `darktable|edited` for pictures that are finished and ready to export.
+6. The user may set color labels, tags and metadata in light table, after editing and before exporting, for better archiving. 
+7. The user may export and print the pictures. It is advised to keep a 16 bits TIFF export in Adobe RGB or ProPhotoRGB color spaces for archival purposes as soon as the edit is finished, to prevent any data loss that may incur with future versions of R&Darktable or upstream darktable (although everything is done to ensure future compatibility of the software with old edits, mistakes happened and will happen again).
+
+## Processing workflow
+
+The scene-referred workflow is the standard in R&Darktable, as it proved to be faster and more reliable for users who allocated some time to understand it. It relies on manipulating the image in a framework where pixel RGB is treated as a light emission for as long as possible, allowing accurate (de-)blurring, (de-)noising, illuminant correction and color-preserving (hue and saturation) brightening/darkening (based on exposure compensations). When the last optically-bound image filter is applied, it then shifts to a perceptual framework where the pixel RGB is converted and handled as a 3D color object (hue, chroma or saturation, lightness or brightness) using color appearance models.
+
+1. The user will setup the global exposure as to match the overall picture brightness to the desired level, in exposure module. This will usually consist into matching the average brightness or the brightness of the picture's subject to the brightness of the GUI background color (middle-grey by design),
+2. The user will ensure the bounds of the scene dynamic range are properly remapped to the bounds of the display dynamic range, in filmic module. For typical SDR monitors, the default display settings will not need to be changed, but the scene white and black relative exposures will need to be adjusted for each image, either automatically (use the "Auto tune levels" button) or manually. Then, adjust the contrast (in "look" tab) to taste.
+3. The user will ensure the white balance is neutral (reminder : it's not an artistic choice) by setting the "CAT" tab properly, in color calibration module. The user may calibrate the colors directly from a color checker test shot too.
+4. Any artistic color deviation, in hue or in saturation, may be applied in color balance module. 
+5. Any other artistic change can then be made.
