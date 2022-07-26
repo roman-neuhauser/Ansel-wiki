@@ -43,6 +43,20 @@ Any tool can only be made optimal for a single and definite use case. Supporting
 6. The user may set color labels, tags and metadata in light table, after editing and before exporting, for better archiving. 
 7. The user may export and print the pictures. It is advised to keep a 16 bits TIFF export in Adobe RGB or ProPhotoRGB color spaces for archival purposes as soon as the edit is finished, to prevent any data loss that may incur with future versions of R&Darktable or upstream darktable (although everything is done to ensure future compatibility of the software with old edits, mistakes happened and will happen again).
 
+### Notes and Comments
+
+The proposed culling and storing method is the best as it allows to efficiently search and access the pictures from any external software, including web browsers and file browsers. Directories containing dates and job names can be easily searched from any file browser, and each directory is a consistent collection on its own that can be re-imported as a whole, with no further internal sorting.
+
+Users are advised against ditching all pictures in a yearly directory and relying too heavily on R&Darktable/darktable's filtering features to browse them. If you need to send pictures to a website or to print via internet (through a web browser calling the file browser), this method is clearly inefficient. It is probably the origin of the filtering over-engineered GUI introduced in darktable 4.0.
+
+Users are also advised against the "mad librarian syndrom", which consists in hugely overdoing the tagging and sorting. You may heavily rely on tags to structure your database of images if you run a photo stock agency and need to deliver pictures of matching content for illustrative purposes, but it is overkill for an individual so keep it simple. Tags are meant to bind similar pictures together, if you find yourself using tags applied to only 1 or 2 pictures, you are defeating their purpose and your tagging method is too restrictive. Restrictive and specialized tags should be made hierarchical, so the parent tag can be fetched instead of cooking complex queries fetching multiple children to get your images.
+
+Although color labels may be used as implicit status tag, the recommended way of documenting the status of an image is through the `darktable` tag children, which is explicit. Such status tags may get a dedicated GUI at some point.
+
+In darktable, the tags have been customarily misunderstood as mere keywords, but they are actually hierarchical taxonomies that can be used to declare categories or arbitrary collections. If your pictures are properly stored in directories containing meaningful names, then those names can be used as keywords in searches without having to duplicate your efforts into tagging. Many users, including myself, manage databases of more then 30.000 images through only directories (filmroll) names.
+
+In any case, if you find yourself needing a complex GUI to sort and access your pictures, your method needs to be simplified. A good software allows to achieve simple tasks simply, and I refuse to make the simple tasks complicated just to account for insane workflows.
+
 ## Processing workflow
 
 The scene-referred workflow is the standard in R&Darktable, as it proved to be faster and more reliable for users who allocated some time to understand it, and allows an unified treatment for HDR and SDR scenes alike. It relies on manipulating the image in a framework where pixel RGB is treated as a light emission for as long as possible, allowing accurate (de-)blurring, (de-)noising, illuminant correction and color-preserving brightening/darkening based on exposure compensations. When the last optically-bound image filter is applied, it then shifts to a perceptual framework where the pixel RGB is converted and handled as a 3D color object (hue, chroma or saturation, lightness or brightness) using color appearance models.
