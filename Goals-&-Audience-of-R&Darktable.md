@@ -52,3 +52,9 @@ The scene-referred workflow is the standard in R&Darktable, as it proved to be f
 3. The user will ensure the white balance is neutral (reminder : it's not an artistic choice) by setting the "CAT" tab properly, in color calibration module. The user may calibrate the colors directly from a color checker test shot too.
 4. Any artistic color deviation, in hue or in saturation, may be applied in color balance module. 
 5. Any other artistic change can then be made.
+
+# Target audience
+
+The target audience of R&Darktable is any photographer willing to have a fine-grained control over colors in their pictures while making no compromise on the visual quality. This will appeal mostly to the artistically-minded ones. 
+
+Compared to upstream darktable, R&Darktable tries to provide a GUI that behaves more like the rest of the world and optimized for the workflows defined above, in the hope that it will broaden its audience out of the Linux-centered geeks.
