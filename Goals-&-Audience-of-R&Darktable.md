@@ -45,7 +45,7 @@ Any tool can only be made optimal for a single and definite use case. Supporting
 
 ### Notes and Comments
 
-The proposed culling and storing method is the best as it allows to efficiently search and access the pictures from any external software, including web browsers and file browsers. Directories containing dates and job names can be easily searched from any file browser, and each directory is a consistent collection on its own that can be re-imported as a whole, with no further internal sorting.
+The proposed culling and storing method is the best as it allows to efficiently search and access the pictures from any external software, including other cataloguing software and file browsers. Directories containing dates and job names can be easily searched from any file browser, and each directory is a consistent collection on its own that can be re-imported as a whole, with no further internal sorting.
 
 Users are advised against ditching all pictures in a yearly directory and relying too heavily on R&Darktable/darktable's filtering features to browse them. If you need to send pictures to a website or to print via internet (through a web browser calling the file browser), this method is clearly inefficient. It is probably the origin of the filtering over-engineered GUI introduced in darktable 4.0.
 
