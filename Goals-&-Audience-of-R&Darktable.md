@@ -16,6 +16,8 @@ Finally, digital imaging has been driven by computer scientists rather than by c
 
 R&Darktable aims at being an instrument of visual expression letting artists develop their own interpretation of the raw material by allowing a large expressive range of color effects, much like a musical instrument lets musicians interpret the score by allowing a large expressive range of sound effects. This is achieved by putting back the retoucher in the center of the image processing, by allowing a transparent and as-direct-as-possible access to the image data, and by providing color manipulations making sense either on an optical level or on a psycho-perceptual level. 
 
+Although film and the analogue legacy is often used as an inspiration and as a starting point/first base, making digital image processing a 1:1 virtual translation of analogue printing is not the goal. Let us not forget that film was engineered within the technical limitations of dyes and chemicals, and that many of its beloved properties are actually limitations of its technology (which is not to say that don't have expressive merits, but let's not fall into backward-looking for the sake of it).
+
 ## User-level goal of R&Darktable
 
 1. Allow to efficiently cull the photographs coming out of the camera/memory card, in order to pick only the ones worthy of being fully post-processed,
