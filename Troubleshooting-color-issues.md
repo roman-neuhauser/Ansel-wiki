@@ -67,3 +67,11 @@ In darkroom, you can also preview at 1:1 but it has one more shortcoming : any g
 OpenCL drivers are notoriously bad, and it has nothing to do with any particular OS/platform or vendor (though AMD tends to be consistently shitty in the 2020's). It happens regularly that some driver update makes OpenCL entirely or subtly broken. 
 
 Check **when** your drivers are updated, and don't hesitate to roll back to the previously working version if anything breaks. If you don't have time to deal with that nonsense, simply avoid any driver upgrade once you found the one that worked for you. 
+
+# Is your image viewer color-managed ?
+
+darktable is properly color-managed. This part of the code has been consistently working and tested for the past 10 years, and I have checked it myself several times. Problem is, many image viewers and web browsers are not. So, in case of a disagreement between darktable's internal color and whatever you see in another image viewer, try to assess first if that app is doing the right thing. 
+
+Also, note that the default Windows 10 image viewer has "image enhancements" enabled by default, and you need to find that option to disable it. 
+
+Similarly, pictures exported to Instagram and some other websites from Mozilla Firefox are re-encoded in a weird way (color will look less saturated), compared to exports through Chromium/Google Chrome
