@@ -61,3 +61,9 @@ There are tricks and mitigating solutions that try to make the output of these f
 Exporting can be done using 2 strategies : process the full-resolution image, then downsize last (if needed), or downsize first, then process the low-resolution image. The first option will be slower and may introduce aliasing artifacts (due to the fact that we interpolate non-linear RGB with high-frequencies), but neighbourhood filters will behave as expected. The second option will be faster, but neighbourhood filters can show significantly different output. Choose your poison.
 
 In darkroom, you can also preview at 1:1 but it has one more shortcoming : any guided filter (either in *tone equalizer* or in the masking *feathering*) will only see the currently displayed region (possibly cropped to fit in the screen), instead of the full image. This is of course faster to process, but may generate some discrepancies for very large filters.
+
+# Don't upgrade your OpenCL drivers
+
+OpenCL drivers are notoriously bad, and it has nothing to do with any particular OS/platform or vendor (though AMD tends to be consistently shitty in the 2020's). It happens regularly that some driver update makes OpenCL entirely or subtly broken. 
+
+Check **when** your drivers are updated, and don't hesitate to roll back to the previously working version if anything breaks. If you don't have time to deal with that nonsense, simply avoid any driver upgrade once you found the one that worked for you. 
