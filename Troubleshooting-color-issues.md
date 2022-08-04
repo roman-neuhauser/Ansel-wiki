@@ -52,7 +52,7 @@ There **is** an expected discrepancy though, between full resolution exports, an
 
 ## Context
 
-All those filters rely on some amount of neighbouring pixels for their output. So, if you crop the image, you change the neighbourhood. But if you downsize it, first of all you remove sharp details (so, for example, sharpening will act on the coarser details instead of the finer), and then there might be rounding errors (say your filter does stuff by grabbing all pixels up to a 3 px distance when zoomed 1:1 — zoom at 1:2, that makes 1.5 px, but there is no such thing as an half pixel, so that will be rounded to either 1 px or 2 px, and that's a 33% error).
+All those filters rely on some amount of neighbouring pixels for their output. So, if you crop the image, you change the neighbourhood. But if you downsize it, first of all you remove sharp details (so, for example, sharpening will act on the coarser details instead of the finer), and then there might be rounding errors (say your filter does stuff by grabbing all pixels within a 3 px distance when zoomed 1:1 — zoom at 1:2, that makes it a 1.5 px distance, but there is no such thing as an half pixel, so that will be rounded to either 1 px or 2 px, and that's a 33% error).
 
 There are tricks and mitigating solutions that try to make the output of these filters visually consistent from afar, no matter the zooming level you are using, but they work until they don't, precisely because of the integer nature of pixels that will necessarily introduce rounding errors. 
 
