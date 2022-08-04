@@ -77,3 +77,11 @@ Also, note that the default Windows 10 image viewer has "image enhancements" ena
 Similarly, pictures exported to Instagram and some other websites from Mozilla Firefox are re-encoded in a weird way (color will look less saturated), compared to exports through Chromium/Google Chrome (which will look as in darktable).
 
 There is a common belief that images for the web should be only exported in sRGB, and that's partly wrong. darktable will put the color profile used to export the image in its metadata, such that any color-managed app can use it and convert the color to whatever display space is being used. So you can technically export pictures in whatever color space you choose. However, there is a common practice that consists in stripping the metadata of the pictures entirely, in websites and CMS, to save some bandwidth. If the image file doesn't provide its color space, then any color management system is supposed to assume it is sRGB (as per ICC recommendations), so if the metadata stripping was done without pre-converting the colors to sRGB, then your picture will be wrongly taken as sRGB all the time. So exporting to sRGB for web is the safe thing to do, but if the images are posted under your control and you know metadata are kept, then do as you please.
+
+# Softproofing may not be what you think it is
+
+Softproofing is a process that tries to emulate on screen the final appearance of a print. It's full of challenges and not great, because the screen is emissive and the print is reflective, so that doesn't start well. But there is worse.
+
+Typical screens have a contrast ratio (white luminance / black luminance) of at least 300:1, and sometimes much more. Inkjet prints on matte paper have a contrast ratio of 50:1, and on glossy paper, maybe 100:1. That's a third to a sixth of what you see on a typical screen.
+
+To emulate the print contrast, the ICC way is to anchor whites (the screen white and the paper white) to the same luminance value (typically, 90 Cd/m²). The adjustment variable will then be black, which means that the softproofing will brighten the blacks on screen as to reproduce the same contrast ratio as the print. This gives a "veiled", "washed" and "milky" black that most people don't expect and call an "artifact", but it is absolutely what should be seen.
