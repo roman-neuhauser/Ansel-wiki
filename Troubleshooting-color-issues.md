@@ -74,4 +74,6 @@ darktable is properly color-managed. This part of the code has been consistently
 
 Also, note that the default Windows 10 image viewer has "image enhancements" enabled by default, and you need to find that option to disable it. 
 
-Similarly, pictures exported to Instagram and some other websites from Mozilla Firefox are re-encoded in a weird way (color will look less saturated), compared to exports through Chromium/Google Chrome
+Similarly, pictures exported to Instagram and some other websites from Mozilla Firefox are re-encoded in a weird way (color will look less saturated), compared to exports through Chromium/Google Chrome (which will look as in darktable).
+
+There is a common belief that images for the web should be only exported in sRGB, and that's partly wrong. darktable will put the color profile used to export the image in its metadata, such that any color-managed app can use it and convert the color to whatever display space is being used. So you can technically export pictures in whatever color space you choose. However, there is a common practice that consists in stripping the metadata of the pictures entirely, in websites and CMS, to save some bandwidth. If the image file doesn't provide its color space, then any color management system is supposed to assume it is sRGB (as per ICC recommendations), so if the metadata stripping was done without pre-converting the colors to sRGB, then your picture will be wrongly taken as sRGB all the time.
