@@ -45,3 +45,19 @@ If you absolutely need to compare physical prints next to your screen (though I�
 Finally, whatever happens, stay away from the 3D curves in profile (that is, one curve per R, G, B channel). They will create white balance discrepancies across your grey gradients (so black could be colder and white could be warmer), especially in DisplayCal, which has (unidentified) issues with color temperature computations. If you have the choice between using XRite software (on Windows) or DisplayCal (on Linux or else), use XRite.
 
 If you profile a printer, keep in mind that any color profile is valid **only** for a particular triplet { printer driver + paper + ink cartridges }. In any case, I personally think that printing at home is a not worth the trouble and way too expensive for an amateur, unless you print at least several times a week (reason : when you start your printer again after some time unused, it will clean its nozzles first, and will do so with good ink from the cardridges – not only will it not be available for the next 15 min, but half or more of your expensive ink will actually end up being used as detergent).
+
+# Remove local contrast modifiers
+
+There **is** an expected discrepancy though, between full resolution exports, and lower resolutions/cropped image exports : the local contrast modifiers. Those are the modules : *local contrast*, *contrast equalizer*, *blurs*, *low-pass*, *diffuse or sharpen*, *sharpen*, *highlights reconstruction* (in *guided laplacian* mode), the *tone equalizer* if used with the internal guided filter for local contrast preservation, and the *details mask* (in parametric masks options). 
+
+## Context
+
+All those filters rely on some amount of neighbouring pixels for their output. So, if you crop the image, you change the neighbourhood. But if you downsize it, first of all you remove sharp details (so, for example, sharpening will act on the coarser details instead of the finer), and then there might be rounding errors (say your filter does stuff by grabbing all pixels up to a 3 px distance when zoomed 1:1 — zoom at 1:2, that makes 1.5 px, but there is no such thing as an half pixel, so that will be rounded to either 1 px or 2 px, and that's a 33% error).
+
+There are tricks and mitigating solutions that try to make the output of these filters visually consistent from afar, no matter the zooming level you are using, but they work until they don't, precisely because of the integer nature of pixels that will necessarily introduce rounding errors. 
+
+## Export and preview at 1:1
+
+Exporting can be done using 2 strategies : process the full-resolution image, then downsize last (if needed), or downsize first, then process the low-resolution image. The first option will be slower and may introduce aliasing artifacts (due to the fact that we interpolate non-linear RGB with high-frequencies), but neighbourhood filters will behave as expected. The second option will be faster, but neighbourhood filters can show significantly different output. Choose your poison.
+
+In darkroom, you can also preview at 1:1 but it has one more shortcoming : any guided filter (either in *tone equalizer* or in the masking *feathering*) will only see the currently displayed region (possibly cropped to fit in the screen), instead of the full image. This is of course faster to process, but may generate some discrepancies for very large filters.
