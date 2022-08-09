@@ -62,6 +62,10 @@ Don't ever start working on a PR before the connected issue is in the "To do" co
 
 R&Darktable puts a different interface on top of darktable's core. If you face bugs only affecting the GUI, they most likely belong to R&Darktable's bug tracker. If you face bugs affecting picture processing (garbled output, crash during image processing, styles and presets issues, etc.), they most likely belong to upstream darktable's bug tracker.
 
+# Testing new features
+
+You can keep track of the new features and bugfixes recently merged into the `candidate` and `master` branches by using the project management Kanban board: they will stay in the "Testing" column for some time until I feel they got tested enough. The Kanban board references the base issues connected to these features/bug, which will contain the list of tests to perform to validate that the code is working as intended.
+
 # Code quality
 
 Pull requests that don't match the minimum code quality requirements will not be accepted. These requirements aim at ensuring long-term maintainability and stability by enforcing clear, legible code structured with a simple logic.
