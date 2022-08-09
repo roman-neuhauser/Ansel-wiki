@@ -1,5 +1,20 @@
 R&Darktable is not a community project in the sense that [design by committee](https://en.wikipedia.org/wiki/Design_by_committee) will not be accepted. I'm the designer, I lead the design process and decisions.
 
+## About discussions
+
+We live in a World where the volume of information and communication has become overwhelming and humans don't have the bandwidth to process all of it. Endless threads and unregulated conversations are actively harming communication by diluting important information and exhausting the reader. **Discussion is solely meant to reach an understanding and proceed to actionable decisions**.
+
+For chat or general questions, please use the [discussions forum](https://github.com/Aurelien-Pierre/R-Darktable/discussions). 
+
+In PR and issues, please try to stay concise and on-point :
+
+* Lists of technical details (like OS, use of OpenCL, screen size, etc.) should make use of bullet lists.
+* Screenshots and drawings can go a long way. 
+* If you are replying to a particular point or person, quote the section of text you are replying to. 
+* Break your text into paragraphs of roughly 4 to 8 lines, but avoid sending each sentence to a new paragraph.
+
+Good principles on issues/tickets interactions can be found [here](https://www.yegor256.com/2014/11/24/principles-of-bug-tracking.html)
+
 # Design process
 
 The purpose of a sane design process is to avoid biasing the solutions too early with one's pet design/tech and to avoid getting lost in the technicalities, but to always come back to the core basics and principles of what we are doing: post-processing possibly large batches of raw images for all kinds of output media.
@@ -41,19 +56,6 @@ If the prototype proves itself unsatisfactory, it may be rejected and another on
 If you don't follow those steps, you lose my and everybody's time, so your PR will be refused systematically with no exception. 
 
 Don't ever start working on a PR before the connected issue is in the "To do" column of the Kanban board, because it means there is no adopted solution so you will most likely lose your time.
-
-## About discussions
-
-We live in a World where the volume of information and communication has become overwhelming and humans don't have the bandwidth to process all of it. Too much communication, endless threads and unregulated conversations are actively harming communication by diluting important information and exhausting the reader. **Discussion is solely meant to reach an understanding and proceed to actionable decisions**.
-
-For chat or general questions, please use the [discussions](https://github.com/Aurelien-Pierre/R-Darktable/discussions) feature. 
-
-In PR and issues, please try to stay concise and on-point :
-
-* Lists of technical details (like OS, use of OpenCL, screen size, etc.) should make use of bullet lists.
-* Screenshots and drawings can go a long way. 
-* If you are replying to a particular point or person, quote the section of text you are replying to. 
-* Break your text into paragraphs of roughly 4 to 8 lines, but avoid sending each sentence to a new paragraph.
 
 # Bugs
 
