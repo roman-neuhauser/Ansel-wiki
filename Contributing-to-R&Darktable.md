@@ -75,3 +75,13 @@ Pull requests that don't match the minimum code quality requirements will not be
 9. Always remember that the best code is the most simple. KISS. To achieve this goal, it's usually better to write code from scratch rather than to try mix-and-matching bits of existing code through heavy copy-pasting.
 
 In an ideal world, any PR would follow [design patterns best practices](https://en.wikipedia.org/wiki/Software_design_pattern).
+
+# Context and closing thoughts
+
+The darktable project became high-traffic around 2019 because Lightroom switched to a subscription-based model and darktable had offered Windows versions since 2017 or so. Its main problem was its whole identity and management was, precisely, no management at all and that did not scale well. 
+
+Having more people working with you divides the amount of work by that much, until you reach a team of 5-8 persons. At that point, you need to start structuring the collaborations, which means having more work overall because you have to divert resources and time into making it work as a team. This is more overhead, but with no structure, a growing team is actually less efficient than a couple of individuals. 
+
+This has actively damaged darktable as a project, leading to much noise in the issues tracker, lots of them without follow-ups, a general lack of rigorous testing and a decrease in code quality as well as in usability and general UI/UX. Bugs get merged faster than they get fixed, and there is just so much activity on the master branch that it's impossible to follow carefully what get merged. More concerning, the amount of work needed to keep the project afloat is increasing, which is always a bad smell for a project reaching feature-completeness.
+
+I just want to avoid any of that. 
