@@ -53,6 +53,7 @@ In PR and issues, please try to stay concise and on-point :
 * Lists of technical details (like OS, use of OpenCL, screen size, etc.) should make use of bullet lists.
 * Screenshots and drawings can go a long way. 
 * If you are replying to a particular point or person, quote the section of text you are replying to. 
+* Break your text into paragraphs of roughly 4 to 8 lines, but avoid sending each sentence to a new paragraph.
 
 # Bugs
 
