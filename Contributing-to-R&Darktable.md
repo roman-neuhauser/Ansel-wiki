@@ -1,6 +1,6 @@
 R&Darktable is not a community project in the sense that [design by committee](https://en.wikipedia.org/wiki/Design_by_committee) will not be accepted. I'm the designer, I lead the design process and decisions.
 
-## About discussions
+# About discussions
 
 We live in a World where the volume of information and communication has become overwhelming and humans don't have the bandwidth to process all of it. Endless threads and unregulated conversations are actively harming communication by diluting important information and exhausting the reader. **Discussion is solely meant to reach an understanding and proceed to actionable decisions**.
 
