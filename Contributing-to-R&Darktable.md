@@ -2,6 +2,12 @@ R&Darktable is not a community project in the sense that [design by committee](h
 
 # About discussions
 
+-----
+
+*If your English writing level is really too low for communication, keep your messages in your native language and we will find a way to make it work.*
+
+-----
+
 We live in a World where the volume of information and communication has become overwhelming and humans don't have the bandwidth to process all of it. Endless threads and unregulated conversations are actively harming communication by diluting important information and exhausting the reader. **Discussion is solely meant to reach an understanding and proceed to actionable decisions**.
 
 For chat or general questions, please use the [discussions forum](https://github.com/Aurelien-Pierre/R-Darktable/discussions). In PR and issues, please try to stay concise and on-point :
