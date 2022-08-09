@@ -93,4 +93,4 @@ This has actively damaged darktable as a project, leading to much noise in the i
 
 More concerning, the amount of work needed to keep the project afloat is increasing, which is always a bad smell for a project reaching feature-completeness, and some bugs have been there for years now. Finally, PR get conflicts very fast because different people work on the same parts without dialogue or supervision, and while Git provides some helpers to manage conflicts, ultimately it has to end with a good code reading and manual landmines defusing.
 
-I just want to avoid any of that, and those bad habits now grounded are impossible to change after 12 years.
+I just want to avoid any of that, and those bad habits now grounded are impossible to change in upstream darktable after 12 years.
