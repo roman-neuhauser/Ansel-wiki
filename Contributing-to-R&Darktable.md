@@ -4,16 +4,14 @@ R&Darktable is not a community project in the sense that [design by committee](h
 
 We live in a World where the volume of information and communication has become overwhelming and humans don't have the bandwidth to process all of it. Endless threads and unregulated conversations are actively harming communication by diluting important information and exhausting the reader. **Discussion is solely meant to reach an understanding and proceed to actionable decisions**.
 
-For chat or general questions, please use the [discussions forum](https://github.com/Aurelien-Pierre/R-Darktable/discussions). 
-
-In PR and issues, please try to stay concise and on-point :
+For chat or general questions, please use the [discussions forum](https://github.com/Aurelien-Pierre/R-Darktable/discussions). In PR and issues, please try to stay concise and on-point :
 
 * Lists of technical details (like OS, use of OpenCL, screen size, etc.) should make use of bullet lists.
 * Screenshots and drawings can go a long way. 
 * If you are replying to a particular point or person, quote the section of text you are replying to. 
 * Break your text into paragraphs of roughly 4 to 8 lines, but avoid sending each sentence to a new paragraph.
 
-Good principles on issues/tickets interactions can be found [here](https://www.yegor256.com/2014/11/24/principles-of-bug-tracking.html)
+Good principles on issues/tickets interactions can be found [here](https://www.yegor256.com/2014/11/24/principles-of-bug-tracking.html).
 
 # Design process
 
