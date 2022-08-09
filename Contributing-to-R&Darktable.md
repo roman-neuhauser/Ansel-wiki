@@ -10,6 +10,7 @@ For chat or general questions, please use the [discussions forum](https://github
 * Screenshots and drawings can go a long way. 
 * If you are replying to a particular point or person, quote the section of text you are replying to. 
 * Break your text into paragraphs of roughly 4 to 8 lines, but avoid sending each sentence to a new paragraph.
+* Keep in mind everybody speaks English but very few people are native speakers, so try to stick to basic Globish.
 
 Good principles on issues/tickets interactions can be found [here](https://www.yegor256.com/2014/11/24/principles-of-bug-tracking.html).
 
@@ -84,6 +85,6 @@ Having more people working with you divides the amount of work by that much, unt
 
 This has actively damaged darktable as a project, leading to much noise in the issues tracker, lots of them without follow-ups, a general lack of rigorous testing and a decrease in code quality as well as in usability and general UI/UX. Bugs get merged faster than they get fixed, and there is just so much activity on the master branch that it's impossible to follow carefully what get merged. 
 
-More concerning, the amount of work needed to keep the project afloat is increasing, which is always a bad smell for a project reaching feature-completeness, and some bugs have been there for years now. Finally, PR get conflicts very fast because different people work on the same parts without dialogue or supervision.
+More concerning, the amount of work needed to keep the project afloat is increasing, which is always a bad smell for a project reaching feature-completeness, and some bugs have been there for years now. Finally, PR get conflicts very fast because different people work on the same parts without dialogue or supervision, and while Git provides some helpers to manage conflicts, ultimately it has to end with a good code reading and manual landmines defusing.
 
 I just want to avoid any of that, and those bad habits now grounded are impossible to change after 12 years.
