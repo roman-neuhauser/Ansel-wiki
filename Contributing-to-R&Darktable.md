@@ -91,6 +91,8 @@ Having more people working with you divides the amount of work by that much, unt
 
 This has actively damaged darktable as a project, leading to much noise in the issues tracker, lots of them without follow-ups, a general lack of rigorous testing and a decrease in code quality as well as in usability and general UI/UX. Bugs get merged faster than they get fixed, and there is just so much activity on the master branch that it's impossible to follow carefully what get merged. 
 
-More concerning, the amount of work needed to keep the project afloat is increasing, which is always a bad smell for a project reaching feature-completeness, and some bugs have been there for years now. Finally, PR get conflicts very fast because different people work on the same parts without dialogue or supervision, and while Git provides some helpers to manage conflicts, ultimately it has to end with a good code reading and manual landmines defusing.
+More concerning, the amount of work needed to keep the project afloat is increasing, which is always a bad smell for a project reaching feature-completeness, and some bugs have been there for years now. Some much-needed executive decisions, that would allow to keep the project's ambitions in sync with the available resources, are not made in order to play it nice, which results in overreaching.
+
+Finally, PR get conflicts very fast because different people work on the same parts without dialogue or supervision, and while Git provides some helpers to manage conflicts, ultimately it has to end with a good code reading and manual landmines defusing.
 
 I just want to avoid any of that, and those bad habits now grounded are impossible to change in upstream darktable after 12 years.
