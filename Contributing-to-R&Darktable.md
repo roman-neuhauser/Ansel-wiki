@@ -42,6 +42,18 @@ If you don't follow those steps, you lose my and everybody's time, so your PR wi
 
 Don't ever start working on a PR before the connected issue is in the "To do" column of the Kanban board, because it means there is no adopted solution so you will most likely lose your time.
 
+## About discussions
+
+We live in a World where the volume of information and communication has become overwhelming and humans don't have the bandwidth to process all of it. Too much communication, endless threads and unregulated conversations are actively harming communication by diluting important information and exhausting the reader. **Discussion is solely meant to reach an understanding and proceed to actionable decisions**.
+
+For chat or general questions, please use the [discussions](https://github.com/Aurelien-Pierre/R-Darktable/discussions) feature. 
+
+In PR and issues, please try to stay concise and on-point :
+
+* Lists of technical details (like OS, use of OpenCL, screen size, etc.) should make use of bullet lists.
+* Screenshots and drawings can go a long way. 
+* If you are replying to a particular point or person, quote the section of text you are replying to. 
+
 # Bugs
 
 R&Darktable puts a different interface on top of darktable's core. If you face bugs only affecting the GUI, they most likely belong to R&Darktable's bug tracker. If you face bugs affecting picture processing (garbled output, crash during image processing, styles and presets issues, etc.), they most likely belong to upstream darktable's bug tracker.
