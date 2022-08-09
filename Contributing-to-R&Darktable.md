@@ -38,9 +38,7 @@ If the prototype proves itself unsatisfactory, it may be rejected and another on
 
 ## When contributors want to go freestyle
 
-If you don't follow those steps, you lose my and everybody's time, you piss me off and you get called names.
-
-PR that don't come from an issue following those steps will be refused systematically with no exception. 
+If you don't follow those steps, you lose my and everybody's time, so your PR will be refused systematically with no exception. 
 
 Don't ever start working on a PR before the connected issue is in the "To do" column of the Kanban board, because it means there is no adopted solution so you will most likely lose your time.
 
