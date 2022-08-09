@@ -34,6 +34,8 @@ They might be conditional to researching theoretical and technical aspects to as
 
 Adopted solutions might get directly triaged to the "To do" column if they require only well-known tools and techs.
 
+Ideally, the points to test and the testing procedure to validate the prototype should be written even before having a working prototype. At very least, the tests should ensure no regression happened in related features and tools. 
+
 ## Prototypes come third
 
 Only the issues triaged in the "To do" column of the [project management Kanban board](https://github.com/users/aurelienpierre/projects/1/views/1) will be worked on, by myself or by anyone willing to tackle them. 
