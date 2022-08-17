@@ -12,4 +12,5 @@ There are multiple end goals here :
 
 1. the people who support me (thanks to them !) may want to know how their money is used, it is a legitimate request and this will provide some transparency in that regard,
 2. the people who confuse open source/free (as in free speech) with costless need to understand how much expenses go into the things they don't pay, and they would probably not work under those terms themselves ; this will provide some much needed factual data to kill those beliefs and fantasies feeding unsustainable working conditions,
-3. ambitions need to match available resources and if users are not ready to invest further in the development **and maintenance** of their tools, there is no reason to extend and over-commit to new features.
+3. ambitions need to match available resources and if users are not ready to invest further in the development **and maintenance** of their tools, there is no reason to extend and over-commit to new features,
+4. seeing how many hours go into maintenance vs. development of new stuff will hammer out this idea that "darktable is an healthy project because it gets a lot of activity". The ugly truth is a lot of that activity, over the past 2 years, has just been accumulating technical debt and sneaky bugs and part of that is because people engage into too complicated projects trying to do too many things at once.
