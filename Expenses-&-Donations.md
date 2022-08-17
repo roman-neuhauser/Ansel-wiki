@@ -8,4 +8,8 @@ Starting in August 2022, my work will be organized through Github issues (= task
 
 The monthly number of hours allocated to the project will be computed by dividing my [Liberapay](https://liberapay.com/aurelienpierre/) donations by 25 €. Since May 2022, it averaged 225 €/week, that is 980 €/month and thus 40 h of work paid each month, meaning an average of 156 h/month were left unpaid in 2022 (and more in 2020-2021). When the monthly threshold of paid hours will be reached, I may choose to keep allocating lost hours on it or to switch to other lucrative activities to handle the current 15% inflation in the Euro zone.
 
-The end goal here is also to match ambitions with available resources and stop to day-dream about nifty new features that nobody will financially support.
+There are multiple end goals here :
+
+1. the people who support me (thanks to them !) may want to know how their money is used, it is a legitimate request and this will provide some transparency in that regard,
+2. the people who confuse open source/free (as in free speech) with costless need to understand how much expenses go into the things they don't pay, and they would probably not work under those terms themselves ; this will provide some much needed factual data to kill those beliefs and fantasies feeding unsustainable working conditions,
+3. ambitions need to match available resources and if users are not ready to invest further in the development **and maintenance** of their tools, there is no reason to extend and over-commit to new features.
