@@ -1,4 +1,4 @@
-R&Darktable is not a community project in the sense that [design by committee](https://en.wikipedia.org/wiki/Design_by_committee) will not be accepted. I'm the designer, I lead the design process and decisions.
+R&Darktable is not a community project in the sense that [design by committee](https://en.wikipedia.org/wiki/Design_by_committee) will not be accepted. I'm the designer, I lead the design process and decisions.
 
 # About discussions
 
@@ -70,7 +70,7 @@ R&Darktable puts a different interface on top of darktable's core. If you face b
 
 # Testing new features
 
-You can keep track of the new features and bugfixes recently merged into the `candidate` and `master` branches by using the project management Kanban board: they will stay in the "Testing" column for some time until I feel they got tested enough. The Kanban board references the base issues connected to these features/bug, which will contain the list of tests to perform to validate that the code is working as intended.
+You can keep track of the new features and bugfixes recently merged into the `candidate` and `master` branches by using the project management Kanban board: they will stay in the "Testing" column for some time until I feel they got tested enough. The Kanban board references the base issues connected to these features/bug, which will contain the list of tests to perform to validate that the code is working as intended.
 
 # Code quality
 
@@ -88,6 +88,13 @@ Pull requests that don't match the minimum code quality requirements will not be
 9. Always remember that the best code is the most simple. KISS. To achieve this goal, it's usually better to write code from scratch rather than to try mix-and-matching bits of existing code through heavy copy-pasting.
 
 In an ideal world, any PR would follow [design patterns best practices](https://en.wikipedia.org/wiki/Software_design_pattern).
+
+## Guidelines
+
+1. **Do things you master** : yes, it's nice to learn new things, but R&Darktable is not a sandbox, it's a production software, and it's not the right place to get your training.
+2. **KISS and be lazy** : R&Darktable doesn't have 50 devs full-time on deck, being minimalistic both in features and in volume of code is reasonable and sane for current management, but also for future maintenance. *(KISS: keep it stupid simple)*.
+3. **Do like the rest of the world** : sure, if everybody is jumping out of the window, you have a right to not follow them, but most issues about software UI/UX have already been solved somewhere and in most cases, it makes sense to simply reuse those solutions, because most users will be familiar with them already.
+4. **Be empathetic** : the very fact that you are reading this on Github means you are probably part of the 2% of the population who can read and write computer code. The remaining 98% don't and are usually lost with techs and computers. Be kind with them and avoid them any unnecessary complication. Now, what's necessary or not is a case-by-case judgment to pass and that's where we need to discuss.
 
 # Context and closing thoughts
 
