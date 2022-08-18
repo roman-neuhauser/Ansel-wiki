@@ -122,6 +122,8 @@ The display-referred RGB modules have been deprecated too:
 
 One of the most common questions, since the big scene-referred change, was "what modules should I avoid". Now, you don't need to ask. Despite what some people say, "deprecated" means the modules can't be found in UI for new edits, but they are still very much in the program and ready to serve for old edits that use them. So deprecating is just GUI cleaning.
 
+The *output color profile* module has been removed from the darkroom GUI. It is **still** applied in the pipeline, so only the GUI widget is hidden, but since the output profile is set either from the display options (for the thumbnails and previews) or in the export module (for file exports), the profile defined in the darkroom module was overwritten anyway, and the duplicated setting confused some users. In the export module, the former "same as image" profile option has been replaced by "same as original", which will reuse the embedded color profile if any or fall back to sRGB otherwise (noticeably for raw files).
+
 # What was changed from mainstream darktable
 
 ## Behaviours
