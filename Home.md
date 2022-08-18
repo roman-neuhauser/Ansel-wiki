@@ -6,7 +6,7 @@ The philosophy of R&Darktable is : 
 
 # What is R&Darktable ?
 
-Rational & Darktable is a darktable fork with 22229 lines of bad code removed. _(Updated 19th July 2022)_
+Rational & Darktable is a darktable fork with 22229 lines of bad code, bugs and ill-designed features removed. _(Updated 19th July 2022)_
 
 Only the general-purpose and robust features have been kept, in order to focus on efficient image-processing and reduce the overhead:
 
@@ -20,6 +20,8 @@ The reasons for having forked are detailed here:
 * [Why a fork ?](https://github.com/aurelienpierre/R-Darktable/wiki/Why-a-fork-%3F),
 * [Open source and professional photography : lies and wishes](https://eng.aurelienpierre.com/2022/06/open-source-and-professional-photography-lies-and-wishes/),
 * [Design by committee will not save FLOSS](https://eng.aurelienpierre.com/2022/06/design-by-committee-will-not-save-floss/).
+
+TL; DR : darktable stability and code quality has degraded too much these past years due to the lack of management and working method, bugs get merged faster than they get fixed, and it's impossible to keep up with the pace at which technical debt is introduced.
 
 # What is **not** R&Darktable ?
 
