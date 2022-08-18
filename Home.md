@@ -21,7 +21,7 @@ The reasons for having forked are detailed here:
 * [Open source and professional photography : lies and wishes](https://eng.aurelienpierre.com/2022/06/open-source-and-professional-photography-lies-and-wishes/),
 * [Design by committee will not save FLOSS](https://eng.aurelienpierre.com/2022/06/design-by-committee-will-not-save-floss/).
 
-TL; DR : darktable stability, usability and code quality have degraded too much these past years due to the lack of management and working method, bugs get merged faster than they get fixed, and it's impossible to keep up with the pace at which technical debt is introduced. There is no uniform line of development, but a collection of random contributions from random people who pop up at random times to push new pet projects. It's simply unsustainable. 
+TL; DR : darktable stability, usability and code quality have degraded too much these past years due to the lack of management and working method, bugs get merged faster than they get fixed, and it's impossible to keep up with the pace at which technical debt is introduced. There is no uniform line of development, but a collection of random contributions from random people who pop up at random times to push new pet projects. This way of working is simply unsustainable since darktable has become an high-traffic project.
 
 # What is **not** R&Darktable ?
 
