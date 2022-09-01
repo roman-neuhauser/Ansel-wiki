@@ -76,17 +76,22 @@ You can keep track of the new features and bugfixes recently merged into the `ca
 
 Pull requests that don't match the minimum code quality requirements will not be accepted. These requirements aim at ensuring long-term maintainability and stability by enforcing clear, legible code structured with a simple logic.
 
+R&Darktable as well as darktable are written in C. This language is meant for advanced programmers to write fast bugs in OS and system-level applications. It gives too much freedom to do harmful things and can't be debugged before running the program, or writing your own tests (which can be bugged themselves, or can bias the kind of bugs they let through). Yet most contributors are not trained for C, many of them are not even professional programmers, so C is a dangerous language for any open source app.
+
+
+
+## Basic coding logic
+
 1. Procedures need to be broken into unit, reusable functions, whenever possible. Exception to this are specialized linear procedures (no branching) doing tasks too specific to be reused anywhere, but in this case use comments to break down the procedures in "chapters" or steps that can be easily spotted and understood.
 2. Functions should achieve only one task at a time. For example, GUI code should not be mixed with SQL or pixel-processing code. Getters and setters should be different functions.
 3. Functions should have only one entry and one exit point (`return`). The only exceptions accepted are an early return if the memory buffer on which the function is supposed to operate is not initialized or if a thread mutex lock is already captured.
 4. Functions should have legible, explicit names and arguments name that advertise their purpose. Programs are meant to be read by humans, if you code for the machine, do it in binary. 
 5. Functions may only nest up to 2 `if` conditional structures. If more than 2 nested `if` are needed, the structure of your code needs to be reevaluated and probably broken down into more granular functions.
 6. `if` should only test uniform cases like the state or the value of ideally one (but maybe more) variable(s) of the same type. If non-uniform cases need to be tested (like `IF user param IS value AND picture buffer IS initialized AND picture IS raw AND picture HAS embedded color profile AND color profile coeff[0] IS NOT NaN`), they should be deferred to a checking function returning a `gboolean` `TRUE` or `FALSE` and named properly so fellow developers understand the purpose of the check without ambiguity on cursory code reading, like `color_matrix_should_apply()`. The branching code will then be `if(color_matrix_should_apply()) pix_out = dot_product(pix_in, matrix);`
-7. The control flow of `for` loops should not depend on internal variable's state, that is no conditional `break` should be used. Indeed, if the number of loop iterations cannot be planned ahead by the compiler, it will not be able to parallelize efficiently and will be unable to vectorize the code. Breaking loops can happen only for non-computationaly-expensive tasks like finding files.
 7. Comments should mention why you did what you did, like your base assumptions, your reasons and any academic or doc reference you used as a base (DOI and URLs should be there). Your code should tell what you did explicitly. If you find yourself having to explain what your code is doing in comments, usually it's a sign that your code is badly structured, variables and functions are ill-named, etc.
 8. Quick workarounds that hide issues instead of tackling them at their root will not be accepted. If you are interested in those, you might consider contributing to upstream darktable instead. The only exceptions will be if the issues are blocking (make the soft crash) and no better solution has been found after some decent amount of time spent researching.
 9. Always remember that the best code is the most simple. KISS. To achieve this goal, it's usually better to write code from scratch rather than to try mix-and-matching bits of existing code through heavy copy-pasting.
-10. R&Darktable as well as darktable are written in C. This language is meant for advanced programmers and gives them absolute power over the machine, while being an absolute mess because you can't debug C code before compiling the program and running it. Yet most contributors are not trained for C, many of them are not even professional programmers, so C is a dangerous language for them. Keep away from pointers as long as they are not necessary and write the `free()` command right after having allocated a buffer.
+
 
 In an ideal world, any PR would follow [design patterns best practices](https://en.wikipedia.org/wiki/Software_design_pattern).
 
@@ -108,6 +113,69 @@ Some random pieces of wisdom from the internet :
 > – Rich Skrenta, <http://www.skrenta.com/2007/05/code_is_our_enemy.html>
 
 > Good programmers write good code. Great programmers write no code. Zen programmers delete code. — [John Byrd](https://www.quora.com/profile/John-Byrd-2)
+
+## Specific C coding logic
+
+C will let you write in buffers that have not been allocated (resulting in `segfault` error) and will let you free them, but will not free buffers when they are not needed anymore (resulting in memory leaks if you forgot to do it manually), but since buffer alloc/free may be far away (in the program lifetime as in the source code) from where you use them, it's easy to mess that up. C will also let you cast any pointer to any data type, which enables many programmer mistakes and data corruption. The native string handling methods are not safe (*for reasons I never bothered to understand), so we have to use the GLib ones to prevent security exploits.
+
+Basically, C makes you your own and worst enemy, and it's on you to observe safety rules which wisdom will become clear only once you break them. Much like the bugs in a C program.
+
+1. The control flow of `for` loops should not depend on internal variable's state, that is no conditional `break` or `return` should be used within a `for` loop. Indeed, if the number of loop iterations cannot be planned ahead by the compiler, it will not be able to parallelize efficiently and will be unable to vectorize the code. Breaking loops can happen only for non-computationaly-expensive tasks like finding files.
+2. Avoid `while` loops for the same parallelization reasons.
+3. C is not an object-oriented language, but you can and should use OO logic when relevant in C by using structures to store data and pointers to methods, then uniform getters and setters to define and access the data.
+4. Always access data from buffers using the array-like syntax, from their base pointer, instead of using non-constant pointers on which you perform arithmetic. For example, do:
+```C
+float *const buffer = malloc(64 * sizeof(float));
+for(int i = 0; i < 64; i++)
+{
+  buffer[i] = something;
+}
+```
+Do not do:
+```C
+float *buffer = malloc(64 * sizeof(float));
+for(int i = 0; i < 64; i++)
+{
+  *buffer++ = something;
+}
+```
+The latter version is not only less clear to read, but will prevent compiler optimizations and parallelization. 
+
+5. The use of inline variable increments (see a [nightmare example here](https://www.youtube.com/watch?v=_7Wok3JoOcE)) is strictly forbidden. These are a mess making for many programming errors.
+6. The `case` statements in the `switch` structure should not be additive. Do not do:
+```C
+int tmp = 0;
+switch(var)
+{
+  case VALUE1:
+  case VALUE2:
+    tmp += 1;
+  case VALUE3:
+    do_something(tmp);
+    break;
+  case VALUE4:
+    do_something_else();
+    break;
+}
+```
+On cursory reading, it will not be immediately clear that the `VALUE3` case inherits the clauses defined by the previous cases, especially in situations where there are more cases. Do:
+```C
+int tmp = 0;
+switch(var)
+{
+  case VALUE1:
+  case VALUE2:
+    do_something(tmp + 1);
+    break;
+  case VALUE3:
+    do_something(tmp);
+    break;
+  case VALUE4:
+    do_something_else();
+    break;
+}
+```
+Each case is self-enclosed and the outcome does not depends on the order of declaration.
 
 
 ## Guidelines
