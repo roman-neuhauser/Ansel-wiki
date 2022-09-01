@@ -86,8 +86,29 @@ Pull requests that don't match the minimum code quality requirements will not be
 7. Comments should mention why you did what you did, like your base assumptions, your reasons and any academic or doc reference you used as a base (DOI and URLs should be there). Your code should tell what you did explicitly. If you find yourself having to explain what your code is doing in comments, usually it's a sign that your code is badly structured, variables and functions are ill-named, etc.
 8. Quick workarounds that hide issues instead of tackling them at their root will not be accepted. If you are interested in those, you might consider contributing to upstream darktable instead. The only exceptions will be if the issues are blocking (make the soft crash) and no better solution has been found after some decent amount of time spent researching.
 9. Always remember that the best code is the most simple. KISS. To achieve this goal, it's usually better to write code from scratch rather than to try mix-and-matching bits of existing code through heavy copy-pasting.
+10. R&Darktable as well as darktable are written in C. This language is meant for advanced programmers and gives them absolute power over the machine. Yet most contributors are not trained for C, many of them are not even professional programmers, so C is a dangerous language for them. Keep away from pointers as long as they are not necessary and write the `free()` command right after having allocated a buffer. 
 
 In an ideal world, any PR would follow [design patterns best practices](https://en.wikipedia.org/wiki/Software_design_pattern).
+
+Some random pieces of wisdom from the internet :
+
+> "Everyone knows that debugging is twice as hard as writing a program in the first place. So if you're as clever as you can be when you write it, how will you ever debug it?" — Brian W. Kernighan
+
+> "Without requirements and design, programming is the art of adding bugs to an empty text file." — Louis Srygley
+
+> "Any fool can write code that a computer can understand. Good programmers write code that humans can understand." — Martin Fowler, Refactoring: Improving the Design of Existing Code
+
+> "Always code as if the guy who ends up maintaining your code will be a violent psychopath who knows where you live." — John Woods
+
+> "Whenever I have to think to understand what the code is doing, I ask myself if I can refactor the code to make that understanding more immediately apparent." — Martin Fowler, Refactoring: Improving the Design of Existing Code
+
+> Code is bad. It rots. It requires periodic maintenance. It has bugs that need to be found. New features mean old code has to be adapted. The more code you have, the more places there are for bugs to hide. The longer checkouts or compiles take. The longer it takes a new employee to make sense of your system. If you have to refactor there’s more stuff to move around.
+>
+> Code is produced by engineers. To make more code requires more engineers. Engineers have n^2 communication costs, and all that code they add to the system, while expanding its capability, also increases a whole basket of costs. You should do whatever possible to increase the productivity of individual programmers in terms of the expressive power of the code they write. Less code to do the same thing (and possibly better). Less programmers to hire. Less organizational communication costs. 
+> – Rich Skrenta, <http://www.skrenta.com/2007/05/code_is_our_enemy.html>
+
+> Good programmers write good code. Great programmers write no code. Zen programmers delete code. — [John Byrd](https://www.quora.com/profile/John-Byrd-2)
+
 
 ## Guidelines
 
