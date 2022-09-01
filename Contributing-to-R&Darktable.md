@@ -186,9 +186,9 @@ void function(float value, gboolean is_green, gboolean is_big, gboolean has_hair
 
 void main()
 {
-  if(whatever)
+  if(condition1)
      function(3.f, TRUE, FALSE, TRUE, 80, 90, ...);
-  else if(whatever else)
+  else if(condition2)
      function(3.f, FALSE, TRUE, TRUE, 80, 90, ...);
   else
      function(3.f, FALSE, FALSE, FALSE, 110, 90, ...);
@@ -212,15 +212,15 @@ void function(float value, params_t p)
 
 void main()
 {
-  params_t p = { .is_green = (whatever),
-                 .is_big = (whatever else),
-                 .has_hair = (whatever || whatever else),
-                 .width =  (whatever || whatever else) ? 80 : 110,}
+  params_t p = { .is_green = (condition1),
+                 .is_big = (condition2),
+                 .has_hair = (condition1 || condition2),
+                 .width =  (condition1 || condition2) ? 80 : 110,}
                  .height = 90 };
   function(3.0f, p);
 }
 ```
-The former example is taken from darktable (the function had actually 14 arguments). The copy-pasting of the function call is unnecessary and the multiplication of positional arguments makes it impossible to remember which is which. It also doesn't show what arguments are constant over the different branches, which will make refactorisation difficult. The latter example is not more concise, however the structure not only makes the function easier to call, but the structure declaration allow to explicitly set each argument, with inline checks if needed.
+The former example is taken from darktable (the function had actually 14 arguments). The copy-pasting of the function calls is unnecessary and the multiplication of positional arguments makes it impossible to remember which is which. It also doesn't show what arguments are constant over the different branches, which will make refactorisation difficult. The latter example is not more concise, however the structure not only makes the function easier to call, but the structure declaration allow to explicitly set each argument, with inline checks if needed. The dependence of the input arguments upon the external conditions is also made immediately clear, and the boolean arguments are directly set from the conditions, which will make the program easier to extend in the future and less prone to programming error due to misunderstandings in the variables dependence.
 
 ## Guidelines
 
