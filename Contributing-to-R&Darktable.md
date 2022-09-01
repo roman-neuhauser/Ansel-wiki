@@ -117,6 +117,8 @@ C will let you write in buffers that have not been allocated (resulting in `segf
 
 Basically, C makes you your own and worst enemy, and it's on you to observe safety rules which wisdom will become clear only once you break them. Much like the bugs in a C program. Consider that you write your code to be read by dummies who never programmed in C before.
 
+You also need to keep in mind that the compiler will do most optimizations for you, but will be super conservative about them. The rule of thumb is, if your code is easily understandable by an human (simple logic), it will be properly understood by the compiler, which will take the appropriate optimization measures. The other way around, manual optimizations in the code, that yield cryptic code assumed to be faster on single-threaded systems, usually backfires and yields slower programs after compilation. 
+
 1. The control flow of `for` loops should not depend on internal variable's state, that is no conditional `break` or `return` should be used within a `for` loop. Indeed, if the number of loop iterations cannot be planned ahead by the compiler, it will not be able to parallelize efficiently and will be unable to vectorize the code. Breaking loops can happen only for non-computationaly-expensive tasks like finding files.
 2. Avoid `while` loops for the same parallelization reasons.
 3. C is not an object-oriented language, but you can and should use OO logic when relevant in C by using structures to store data and pointers to methods, then uniform getters and setters to define and access the data.
