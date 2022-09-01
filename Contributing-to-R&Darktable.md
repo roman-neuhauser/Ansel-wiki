@@ -118,7 +118,7 @@ Some random pieces of wisdom from the internet :
 
 C will let you write in buffers that have not been allocated (resulting in `segfault` error) and will let you free them, but will not free buffers when they are not needed anymore (resulting in memory leaks if you forgot to do it manually), but since buffer alloc/free may be far away (in the program lifetime as in the source code) from where you use them, it's easy to mess that up. C will also let you cast any pointer to any data type, which enables many programmer mistakes and data corruption. The native string handling methods are not safe (*for reasons I never bothered to understand), so we have to use the GLib ones to prevent security exploits.
 
-Basically, C makes you your own and worst enemy, and it's on you to observe safety rules which wisdom will become clear only once you break them. Much like the bugs in a C program.
+Basically, C makes you your own and worst enemy, and it's on you to observe safety rules which wisdom will become clear only once you break them. Much like the bugs in a C program. Consider that you write your code to be read by dummies who never programmed in C before.
 
 1. The control flow of `for` loops should not depend on internal variable's state, that is no conditional `break` or `return` should be used within a `for` loop. Indeed, if the number of loop iterations cannot be planned ahead by the compiler, it will not be able to parallelize efficiently and will be unable to vectorize the code. Breaking loops can happen only for non-computationaly-expensive tasks like finding files.
 2. Avoid `while` loops for the same parallelization reasons.
@@ -128,7 +128,7 @@ Basically, C makes you your own and worst enemy, and it's on you to observe safe
 float *const buffer = malloc(64 * sizeof(float));
 for(int i = 0; i < 64; i++)
 {
-  buffer[i] = something;
+  buffer[i] = ...
 }
 ```
 Do not do:
@@ -136,10 +136,10 @@ Do not do:
 float *buffer = malloc(64 * sizeof(float));
 for(int i = 0; i < 64; i++)
 {
-  *buffer++ = something;
+  *buffer++ = ...
 }
 ```
-The latter version is not only less clear to read, but will prevent compiler optimizations and parallelization. 
+The latter version is not only less clear to read, but will prevent compiler optimizations and parallelization because the value of the pointer depends on the loop iteration and would need to be shared between threads if any. The former version leads to a memory access logic independent from the loop iteration and can be safely parallelized. 
 
 5. The use of inline variable increments (see a [nightmare example here](https://www.youtube.com/watch?v=_7Wok3JoOcE)) is strictly forbidden. These are a mess making for many programming errors.
 6. The `case` statements in the `switch` structure should not be additive. Do not do:
@@ -175,8 +175,52 @@ switch(var)
     break;
 }
 ```
-Each case is self-enclosed and the outcome does not depends on the order of declaration.
+Each case is self-enclosed and the outcome does not depends on the order of declaration of the cases.
 
+7. Sort and store your variables into structures that you pass as function arguments instead of using function with more than 8 arguments. Do not do:
+```C
+void function(float value, gboolean is_green, gboolean is_big, gboolean has_hair, int width, int height, ...)
+{
+  ...
+}
+
+void main()
+{
+  if(whatever)
+     function(3.f, TRUE, FALSE, TRUE, 80, 90, ...);
+  else if(whatever else)
+     function(3.f, FALSE, TRUE, TRUE, 80, 90, ...);
+  else
+     function(3.f, FALSE, FALSE, FALSE, 110, 90, ...);
+}
+```
+Do:
+```C
+typedef struct params_t
+{
+  gboolean is_green;
+  gboolean is_big;
+  gboolean has_hair;
+  int width;
+  int height;
+} params_t;
+
+void function(float value, params_t p)
+{
+  ...
+}
+
+void main()
+{
+  params_t p = { .is_green = (whatever),
+                 .is_big = (whatever else),
+                 .has_hair = (whatever || whatever else),
+                 .width =  (whatever || whatever else) ? 80 : 110,}
+                 .height = 90 };
+  function(3.0f, p);
+}
+```
+The former example is taken from darktable (the function had actually 14 arguments). The copy-pasting of the function call is unnecessary and the multiplication of positional arguments makes it impossible to remember which is which. It also doesn't show what arguments are constant over the different branches, which will make refactorisation difficult. The latter example is not more concise, however the structure not only makes the function easier to call, but the structure declaration allow to explicitly set each argument, with inline checks if needed.
 
 ## Guidelines
 
