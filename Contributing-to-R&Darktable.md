@@ -2,7 +2,7 @@ R&Darktable is not a community project in the sense that [design by committee](h
 
 -----
 
-You need mentorship or help on your code & features ? [Book an appointment](https://photo.aurelienpierre.com/private-lessons-on-retouching-with-darktable/?lang=en#book-me) (it's free but some commitment is expected).
+You need mentorship or help on your code & features ? [Book a *developer mentorship* appointment](https://photo.aurelienpierre.com/private-lessons-on-retouching-with-darktable/?lang=en#book-me) (it's free but some commitment is expected).
 
 -----
 
