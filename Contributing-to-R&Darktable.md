@@ -1,7 +1,9 @@
 R&Darktable is not a community project in the sense that [design by committee](https://en.wikipedia.org/wiki/Design_by_committee) will not be accepted. I'm the designer, I lead the design process and decisions.
 
 -----
+
 You need mentorship or help on your code & features ? [Book an appointment](https://photo.aurelienpierre.com/private-lessons-on-retouching-with-darktable/?lang=en#book-me) (it's free but some commitment is expected).
+
 -----
 
 # About discussions
