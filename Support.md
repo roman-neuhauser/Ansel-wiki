@@ -5,7 +5,7 @@ I try my best to help everyone but there are limits I crossed in the past *(wo
 1. photography might be your hobby but it is my job, it might be your break from your job but it's not mine,
 2. there is one of me and many of you,
 3. I enjoy vacations and week-end as much as you do,
-4. office hours are 10:00(am) – 19:00(pm), Paris local time (UTC+01 during winter and UTC+02 during summer).
+4. office hours are 10:00(am) – 19:00(pm), Paris local time (UTC+01 during winter and UTC+02 during summer), monday to friday.
 
 ## Getting support
 
