@@ -1,10 +1,10 @@
-Welcome to the R&Darktable wiki!
+Welcome to the Ansel wiki!
 
-The philosophy of R&Darktable is : 
+The philosophy of Ansel is : 
 
 > If it's half working, then it's fully gone.
 
-# What is R&Darktable ?
+# What is Ansel ?
 
 Rational & Darktable is a darktable fork with 22229 lines of bad code, bugs and ill-designed features removed. _(Updated 19th July 2022)_
 
@@ -23,23 +23,23 @@ The reasons for having forked are detailed here:
 
 TL; DR : darktable stability, usability and code quality have degraded too much these past years due to the lack of management and working method, bugs get merged faster than they get fixed, and it's impossible to keep up with the pace at which technical debt is introduced. There is no uniform line of development, but a collection of random contributions from random people who pop up at random times to push new pet projects. This way of working is simply unsustainable since darktable has become an high-traffic project.
 
-# What is **not** R&Darktable ?
+# What is **not** Ansel ?
 
 1. **It does not aim at making darktable faster** : the pixel pipeline code is exactly the same, and darktable already has a pipeline as fast as it will ever be under the architecture and design chosen in 2009. Improving performance is the goal of [vkdt](https://github.com/hanatos/vkdt), which will not be ready for production for at least a couple of years, and is a full rewrite with a different pipeline. But, of course, removing GUI bloat is going to speed some things up.
 2. **It is not a beginner-friendly photo-editing app** : the goal is to simplify the overhead, meaning everything not directly related to outputting processed images. That is software configuration/options, GUI disposition, file management, labels, etc. Color science is still what it is, and boy, it's no easy.
 3. **It is not a community project** : community is great, except when it grows too much too fast and you don't have any kind of management to keep a unified line of development and a consistent design. More people means more help until you reach a team of 4-5, above this you need to allocate resources to management, so more people means more work. This is exactly what has happened to darktable: lots of hype since v3.0 leading to 2 releases/year with almost 2000 commits in each, so everything gets merged too soon and more bugs are introduced than fixed at each release, all that to keep momentum.
-4. **It is not a hot project** : I consider darktable's development (and therefore R&Darktable's one) roughly 90% finished, meaning it's close to feature-complete. We are reaching the limits of its initial design & architecture regarding how much we can still extend it without actively harming performance and stability. The goal right now is to polish existing features, fix the worst usability pain points and the low-hanging fruits, then keep it stable pending [vkdt](https://github.com/hanatos/vkdt)'s availability. But the darktable's team does not want to hear it and wants to keep adding as much as possible in it.
+4. **It is not a hot project** : I consider darktable's development (and therefore Ansel's one) roughly 90% finished, meaning it's close to feature-complete. We are reaching the limits of its initial design & architecture regarding how much we can still extend it without actively harming performance and stability. The goal right now is to polish existing features, fix the worst usability pain points and the low-hanging fruits, then keep it stable pending [vkdt](https://github.com/hanatos/vkdt)'s availability. But the darktable's team does not want to hear it and wants to keep adding as much as possible in it.
 
 See also : [The future of darktable](https://github.com/aurelienpierre/R-Darktable/wiki/The-future-of-darktable).
 
 # Support
 
-So far, R&Darktable is pretty close to upstream darktable (see the details of the changes below), so there is no reason to get excited. There are no packages yet and it's a work in progress. If you need help with something, please use the Matrix channels:
+So far, Ansel is pretty close to upstream darktable (see the details of the changes below), so there is no reason to get excited. There are no packages yet and it's a work in progress. If you need help with something, please use the Matrix channels:
 
 * In English : https://matrix.to/#/#r&darktable-en:matrix.org
 * En Français : https://matrix.to/#/#r&darktable-fr:matrix.org
 
-R&Darktable builds the same and with the same dependency stack as upstream darktable, see [how to build](https://github.com/aurelienpierre/R-Darktable/wiki/Building-R&Darktable).
+Ansel builds the same and with the same dependency stack as upstream darktable, see [how to build](https://github.com/aurelienpierre/R-Darktable/wiki/Building-Ansel).
 
 # Roadmap
 

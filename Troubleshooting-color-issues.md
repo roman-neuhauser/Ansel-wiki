@@ -1,4 +1,4 @@
-This will apply to upstream darktable as to R&Darktable since they share 100% of their color pipeline. 
+This will apply to upstream darktable as to Ansel since they share 100% of their color pipeline. 
 
 I have spent the past 4 years working full-time on this pipeline, with and without OpenCL, using Nvidia and Intel Neo drivers, mostly on Linux but also on Windows 10, and beating it in various ways. I'm therefore fairly confident in its robustness, and, so far, every time an user has reported a "color issue" or "inconsistency between preview and export", it's been either user mistake in color management (bad ICC profiles) or driver issue. But also, sometimes, wrong expectations.
 

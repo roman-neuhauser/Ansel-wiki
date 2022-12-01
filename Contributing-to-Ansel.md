@@ -1,4 +1,4 @@
-R&Darktable is not a community project in the sense that [design by committee](https://en.wikipedia.org/wiki/Design_by_committee) will not be accepted. I'm the designer, I lead the design process and decisions.
+Ansel is not a community project in the sense that [design by committee](https://en.wikipedia.org/wiki/Design_by_committee) will not be accepted. I'm the designer, I lead the design process and decisions.
 
 -----
 
@@ -72,7 +72,7 @@ Don't ever start working on a PR before the connected issue is in the "To do" co
 
 # Bugs
 
-R&Darktable puts a different interface on top of darktable's core. If you face bugs only affecting the GUI, they most likely belong to R&Darktable's bug tracker. If you face bugs affecting picture processing (garbled output, crash during image processing, styles and presets issues, etc.), they most likely belong to upstream darktable's bug tracker.
+Ansel puts a different interface on top of darktable's core. If you face bugs only affecting the GUI, they most likely belong to Ansel's bug tracker. If you face bugs affecting picture processing (garbled output, crash during image processing, styles and presets issues, etc.), they most likely belong to upstream darktable's bug tracker.
 
 # Testing new features
 
@@ -117,7 +117,7 @@ Some random pieces of wisdom from the internet :
 
 ## Specific C coding logic
 
-R&Darktable as well as darktable are written in C. This language is meant for advanced programmers to write fast bugs in OS and system-level applications. It gives too much freedom to do harmful things and can't be debugged before running the program, or writing your own tests (which can be bugged themselves, or can bias the kind of bugs they let through, and anyway, nobody writes tests). Yet most contributors are not trained for C, many of them are not even professional programmers, so C is a dangerous language for any open source app.
+Ansel as well as darktable are written in C. This language is meant for advanced programmers to write fast bugs in OS and system-level applications. It gives too much freedom to do harmful things and can't be debugged before running the program, or writing your own tests (which can be bugged themselves, or can bias the kind of bugs they let through, and anyway, nobody writes tests). Yet most contributors are not trained for C, many of them are not even professional programmers, so C is a dangerous language for any open source app.
 
 C will let you write in buffers that have not been allocated (resulting in `segfault` error) and will let you free them, but will not free buffers when they are not needed anymore (resulting in memory leaks if you forgot to do it manually), but since buffer alloc/free may be far away (in the program lifetime as in the source code) from where you use them, it's easy to mess that up. C will also let you cast any pointer to any data type, which enables many programmer mistakes and data corruption. The native string handling methods are not safe (*for reasons I never bothered to understand), so we have to use the GLib ones to prevent security exploits.
 
@@ -229,8 +229,8 @@ The former example is taken from [darktable](https://github.com/darktable-org/da
 
 ## Guidelines
 
-1. **Do things you master** : yes, it's nice to learn new things, but R&Darktable is not a sandbox, it's a production software, and it's not the right place to get your training.
-2. **KISS and be lazy** : R&Darktable doesn't have 50 devs full-time on deck, being minimalistic both in features and in volume of code is reasonable and sane for current management, but also for future maintenance. *(KISS: keep it stupid simple)*.
+1. **Do things you master** : yes, it's nice to learn new things, but Ansel is not a sandbox, it's a production software, and it's not the right place to get your training.
+2. **KISS and be lazy** : Ansel doesn't have 50 devs full-time on deck, being minimalistic both in features and in volume of code is reasonable and sane for current management, but also for future maintenance. *(KISS: keep it stupid simple)*.
 3. **Do like the rest of the world** : sure, if everybody is jumping out of the window, you have a right to not follow them, but most issues about software UI/UX have already been solved somewhere and in most cases, it makes sense to simply reuse those solutions, because most users will be familiar with them already.
 4. **Be empathetic** : the very fact that you are reading this on Github means you are probably part of the 2% of the population who can read and write computer code. The remaining 98% don't and are usually lost with techs and computers. Be kind with them and avoid them any unnecessary workflow and/or GUI complication : asking power users to use CLI to perform atypical/complex tasks is ok, asking general users to use CLI or edit config files to perform basic tasks it's not. Now, what's necessary complication or not is a case-by-case judgment to pass and that's where we need to discuss.
 5. **Programming is not the goal** : programming is a mean to an end, the end is to be able to process large volume of pictures in a short amount of time while reaching the desired look on each picture. Programming tasks are to be considered overhead and should be kept minimal, and the volume of code is a liability for any project.
